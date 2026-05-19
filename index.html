@@ -11,17 +11,17 @@
   <style>
     :root {
       --bg-primary: #ffffff;
-      --bg-secondary: #fdf5ff;
+      --bg-secondary: #f4fdf7;
       --bg-card: #ffffff;
-      --bg-card2: #f9f0ff;
-      --green-primary: #c2185b;
-      --green-dark: #880e4f;
-      --green-glow: rgba(194, 24, 91, 0.08);
-      --green-glow-strong: rgba(194, 24, 91, 0.15);
-      --text-primary: #1a1a2e;
+      --bg-card2: #f4fdf7;
+      --green-primary: #06C755;
+      --green-dark: #05a847;
+      --green-glow: rgba(6, 199, 85, 0.1);
+      --green-glow-strong: rgba(6, 199, 85, 0.2);
+      --text-primary: #1a1a1a;
       --text-secondary: #444;
       --text-muted: #888;
-      --border: rgba(194, 24, 91, 0.12);
+      --border: rgba(6, 199, 85, 0.2);
       --border-subtle: rgba(0,0,0,0.06);
     }
 
@@ -37,7 +37,7 @@
 
     body {
       background: #fff;
-      color: #1a1a2e;
+      color: #1a1a1a;
       font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', -apple-system, sans-serif;
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
@@ -64,16 +64,16 @@
       font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', -apple-system, sans-serif;
       font-weight: 800;
       font-size: 18px;
-      color: #c2185b;
+      color: #06C755;
       letter-spacing: -0.5px;
     }
 
     .nav-logo span {
-      color: #1a1a2e;
+      color: #1a1a1a;
     }
 
     .nav-cta {
-      background: #c2185b;
+      background: #06C755;
       color: #000;
       border: none;
       padding: 10px 20px;
@@ -112,7 +112,7 @@
       transform: translateX(-50%);
       width: 700px;
       height: 700px;
-      background: radial-gradient(circle, rgba(214, 51, 132, 0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(6, 199, 85, 0.08) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -120,13 +120,13 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(214, 51, 132, 0.06);
+      background: rgba(6, 199, 85, 0.06);
       border: 1px solid var(--border);
       border-radius: 100px;
       padding: 8px 16px;
       font-size: 12px;
       font-weight: 500;
-      color: #c2185b;
+      color: #06C755;
       margin-bottom: 32px;
       letter-spacing: 0.5px;
     }
@@ -152,10 +152,8 @@
     }
 
     .hero h1 .highlight {
-      background: linear-gradient(135deg, #e91e8c, #9c27b0);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      color: #06C755;
+      -webkit-text-fill-color: #06C755;
     }
 
     .hero-sub {
@@ -182,7 +180,7 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      background: #c2185b;
+      background: #06C755;
       color: #000;
       border: none;
       padding: 18px 32px;
@@ -218,7 +216,7 @@
     }
 
     .btn-secondary:hover {
-      color: #1a1a2e;
+      color: #1a1a1a;
     }
 
     .hero-note {
@@ -245,7 +243,7 @@
     .stat-num {
       font-size: 28px;
       font-weight: 900;
-      color: #c2185b;
+      color: #06C755;
       font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', -apple-system, sans-serif;
       letter-spacing: -1px;
     }
@@ -267,7 +265,7 @@
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 2px;
-      color: #c2185b;
+      color: #06C755;
       text-transform: uppercase;
       margin-bottom: 16px;
     }
@@ -324,7 +322,7 @@
       font-size: 16px;
       font-weight: 700;
       margin-bottom: 10px;
-      color: #1a1a2e;
+      color: #1a1a1a;
     }
 
     .problem-desc {
@@ -386,7 +384,7 @@
     .feature-icon {
       width: 52px;
       height: 52px;
-      background: rgba(214, 51, 132, 0.08);
+      background: rgba(6, 199, 85, 0.08);
       border-radius: 14px;
       display: flex;
       align-items: center;
@@ -417,9 +415,9 @@
     }
 
     .feature-tag {
-      background: rgba(214, 51, 132, 0.06);
+      background: rgba(6, 199, 85, 0.06);
       border: 1px solid var(--border);
-      color: #c2185b;
+      color: #06C755;
       padding: 4px 12px;
       border-radius: 100px;
       font-size: 11px;
@@ -476,7 +474,7 @@
       justify-content: center;
       font-size: 18px;
       font-weight: 900;
-      color: #c2185b;
+      color: #06C755;
       font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', -apple-system, sans-serif;
       flex-shrink: 0;
       position: relative;
@@ -532,10 +530,10 @@
     }
 
     .pricing-card.featured {
-      background: linear-gradient(160deg, #0a2a12, #111);
-      border-color: #c2185b;
+      background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
+      border-color: #06C755;
       transform: scale(1.02);
-      box-shadow: 0 0 80px rgba(214, 51, 132, 0.15);
+      box-shadow: 0 0 80px rgba(6, 199, 85, 0.15);
     }
 
     .pricing-card:not(.featured):hover {
@@ -548,7 +546,7 @@
       top: -14px;
       left: 50%;
       transform: translateX(-50%);
-      background: #c2185b;
+      background: #06C755;
       color: #000;
       font-size: 11px;
       font-weight: 800;
@@ -615,7 +613,7 @@
 
     .plan-features li::before {
       content: '✓';
-      color: #c2185b;
+      color: #06C755;
       font-weight: 700;
       margin-top: 1px;
       flex-shrink: 0;
@@ -643,7 +641,7 @@
     }
 
     .plan-btn-primary {
-      background: #c2185b;
+      background: #06C755;
       color: #000;
     }
 
@@ -659,7 +657,7 @@
 
     .plan-btn-secondary:hover {
       background: rgba(0,0,0,0.08);
-      color: #1a1a2e;
+      color: #1a1a1a;
     }
 
     /* CTA FINAL */
@@ -678,7 +676,7 @@
       transform: translateX(-50%);
       width: 600px;
       height: 600px;
-      background: radial-gradient(circle, rgba(214, 51, 132, 0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(6, 199, 85, 0.08) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -723,7 +721,7 @@
       font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', -apple-system, sans-serif;
       font-weight: 800;
       font-size: 16px;
-      color: #c2185b;
+      color: #06C755;
       margin-bottom: 8px;
     }
 
@@ -772,7 +770,7 @@
     .hero-actions { animation: fadeInUp 0.6s ease both 0.3s; }
 
     .line-gradient {
-      background: linear-gradient(135deg, #d63384 0%, #d63384 100%);
+      background: linear-gradient(135deg, #06C755 0%, #06C755 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -802,7 +800,7 @@
     <div class="hero-actions">
       <a href="https://line.me/R/ti/p/@102fuvbt" target="_blank" rel="noopener" class="btn-primary">
         <svg class="line-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <rect width="24" height="24" rx="6" fill="#d63384"/>
+          <rect width="24" height="24" rx="6" fill="#06C755"/>
           <path d="M12 5C7.58 5 4 8.13 4 12.02c0 2.62 1.65 4.92 4.12 6.24-.18.67-.49 1.73-.49 1.75 0 .05.02.1.06.14a.21.21 0 0 0 .15.05.2.2 0 0 0 .12-.04c.16-.11 2-.32 2.82-1.86A9.27 9.27 0 0 0 12 18.3c4.42 0 8-3.13 8-7.28S16.42 3.74 12 3.74z" fill="white"/>
         </svg>
         LINE公式アカウントを追加する
@@ -974,8 +972,8 @@
         <p class="section-subtitle">まずは無料で試して、必要になったらアップグレード</p>
 
         <div style="display:flex;justify-content:center;gap:12px;margin:32px 0 48px;flex-wrap:wrap">
-          <button onclick="showMonthly()" id="btn-monthly" style="padding:10px 28px;border-radius:100px;font-size:14px;font-weight:600;cursor:pointer;border:2px solid #c2185b;background:#c2185b;color:#fff">月払い</button>
-          <button onclick="showYearly()" id="btn-yearly" style="padding:10px 28px;border-radius:100px;font-size:14px;font-weight:600;cursor:pointer;border:2px solid #c2185b;background:#fff;color:#c2185b">
+          <button onclick="showMonthly()" id="btn-monthly" style="padding:10px 28px;border-radius:100px;font-size:14px;font-weight:600;cursor:pointer;border:2px solid #06C755;background:#06C755;color:#fff">月払い</button>
+          <button onclick="showYearly()" id="btn-yearly" style="padding:10px 28px;border-radius:100px;font-size:14px;font-weight:600;cursor:pointer;border:2px solid #06C755;background:#fff;color:#06C755">
             年払い <span style="background:#ffe082;color:#333;font-size:11px;padding:2px 8px;border-radius:100px;margin-left:4px">1ヶ月無料</span>
           </button>
         </div>
@@ -985,7 +983,7 @@
           <!-- Free -->
           <div class="pricing-card" style="background:#fff;border:1px solid #e8e0f0;border-radius:20px;padding:32px 28px">
             <div style="font-size:12px;font-weight:600;color:#888;letter-spacing:.1em;margin-bottom:8px">FREE</div>
-            <div style="font-size:24px;font-weight:700;color:#1a1a2e;margin-bottom:4px">無料</div>
+            <div style="font-size:24px;font-weight:700;color:#1a1a1a;margin-bottom:4px">無料</div>
             <div style="font-size:13px;color:#888;margin-bottom:24px">まずは気軽にお試し</div>
             <ul style="list-style:none;padding:0;margin:0 0 28px;display:flex;flex-direction:column;gap:12px">
               <li style="font-size:14px;color:#444">✅ 案件管理 3件まで</li>
@@ -994,21 +992,21 @@
               <li style="font-size:14px;color:#bbb">❌ 請求書発行</li>
               <li style="font-size:14px;color:#bbb">❌ AI自動解析</li>
             </ul>
-            <a href="https://line.me/R/ti/p/@102fuvbt" target="_blank" rel="noopener" style="display:block;text-align:center;padding:13px;border-radius:12px;border:2px solid #c2185b;color:#c2185b;font-weight:600;font-size:14px;text-decoration:none">無料で始める</a>
+            <a href="https://line.me/R/ti/p/@102fuvbt" target="_blank" rel="noopener" style="display:block;text-align:center;padding:13px;border-radius:12px;border:2px solid #06C755;color:#06C755;font-weight:600;font-size:14px;text-decoration:none">無料で始める</a>
           </div>
 
           <!-- Pro -->
-          <div class="pricing-card" style="background:linear-gradient(160deg,#fff0f7,#f5e6ff);border:2px solid #c2185b;border-radius:20px;padding:32px 28px;position:relative">
-            <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#c2185b;color:#fff;font-size:11px;font-weight:700;padding:4px 16px;border-radius:100px;white-space:nowrap">人気No.1</div>
-            <div style="font-size:12px;font-weight:600;color:#c2185b;letter-spacing:.1em;margin-bottom:8px">PRO</div>
+          <div class="pricing-card" style="background:linear-gradient(160deg,#f0fdf4,#e8fdf0);border:2px solid #06C755;border-radius:20px;padding:32px 28px;position:relative">
+            <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#06C755;color:#fff;font-size:11px;font-weight:700;padding:4px 16px;border-radius:100px;white-space:nowrap">人気No.1</div>
+            <div style="font-size:12px;font-weight:600;color:#06C755;letter-spacing:.1em;margin-bottom:8px">PRO</div>
             <div class="monthly-price">
-              <span style="font-size:32px;font-weight:700;color:#1a1a2e">¥1,980</span>
+              <span style="font-size:32px;font-weight:700;color:#1a1a1a">¥1,980</span>
               <span style="font-size:14px;color:#888">/月</span>
             </div>
             <div class="yearly-price" style="display:none">
-              <span style="font-size:32px;font-weight:700;color:#1a1a2e">¥21,780</span>
+              <span style="font-size:32px;font-weight:700;color:#1a1a1a">¥21,780</span>
               <span style="font-size:14px;color:#888">/年</span>
-              <div style="font-size:12px;color:#c2185b;font-weight:600;margin-top:2px">1ヶ月分お得！</div>
+              <div style="font-size:12px;color:#06C755;font-weight:600;margin-top:2px">1ヶ月分お得！</div>
             </div>
             <div style="font-size:13px;color:#666;margin:8px 0 24px">案件管理を本格的に効率化</div>
             <ul style="list-style:none;padding:0;margin:0 0 28px;display:flex;flex-direction:column;gap:12px">
@@ -1019,20 +1017,20 @@
               <li style="font-size:14px;color:#333">✅ 管理ダッシュボード</li>
               <li style="font-size:14px;color:#333">✅ 月次レポート</li>
             </ul>
-            <a href="https://line.me/R/ti/p/@102fuvbt" target="_blank" rel="noopener" style="display:block;text-align:center;padding:14px;border-radius:12px;background:#c2185b;color:#fff;font-weight:700;font-size:15px;text-decoration:none">14日間無料で試す</a>
+            <a href="https://line.me/R/ti/p/@102fuvbt" target="_blank" rel="noopener" style="display:block;text-align:center;padding:14px;border-radius:12px;background:#06C755;color:#fff;font-weight:700;font-size:15px;text-decoration:none">14日間無料で試す</a>
           </div>
 
           <!-- Premium -->
           <div class="pricing-card" style="background:#fff;border:1px solid #e8e0f0;border-radius:20px;padding:32px 28px">
-            <div style="font-size:12px;font-weight:600;color:#9c27b0;letter-spacing:.1em;margin-bottom:8px">PREMIUM</div>
+            <div style="font-size:12px;font-weight:600;color:#05a847;letter-spacing:.1em;margin-bottom:8px">PREMIUM</div>
             <div class="monthly-price">
-              <span style="font-size:32px;font-weight:700;color:#1a1a2e">¥3,980</span>
+              <span style="font-size:32px;font-weight:700;color:#1a1a1a">¥3,980</span>
               <span style="font-size:14px;color:#888">/月</span>
             </div>
             <div class="yearly-price" style="display:none">
-              <span style="font-size:32px;font-weight:700;color:#1a1a2e">¥43,780</span>
+              <span style="font-size:32px;font-weight:700;color:#1a1a1a">¥43,780</span>
               <span style="font-size:14px;color:#888">/年</span>
-              <div style="font-size:12px;color:#9c27b0;font-weight:600;margin-top:2px">1ヶ月分お得！</div>
+              <div style="font-size:12px;color:#05a847;font-weight:600;margin-top:2px">1ヶ月分お得！</div>
             </div>
             <div style="font-size:13px;color:#666;margin:8px 0 24px">Proの全機能 ＋ 特別サポート</div>
             <ul style="list-style:none;padding:0;margin:0 0 28px;display:flex;flex-direction:column;gap:12px">
@@ -1041,15 +1039,15 @@
               <li style="font-size:14px;color:#333">✨ <strong>GVA案件の優先ご案内</strong></li>
               <li style="font-size:14px;color:#333">✨ 優先サポート対応</li>
             </ul>
-            <a href="https://line.me/R/ti/p/@102fuvbt" target="_blank" rel="noopener" style="display:block;text-align:center;padding:13px;border-radius:12px;border:2px solid #9c27b0;color:#9c27b0;font-weight:600;font-size:14px;text-decoration:none">14日間無料で試す</a>
+            <a href="https://line.me/R/ti/p/@102fuvbt" target="_blank" rel="noopener" style="display:block;text-align:center;padding:13px;border-radius:12px;border:2px solid #05a847;color:#05a847;font-weight:600;font-size:14px;text-decoration:none">14日間無料で試す</a>
           </div>
 
         </div>
         <p style="text-align:center;margin-top:28px;font-size:13px;color:#aaa">クレジットカードは後から登録。14日間は完全無料で全機能お試しいただけます。</p>
       </div>
       <script>
-      function showMonthly(){document.querySelectorAll('.monthly-price').forEach(function(e){e.style.display='';});document.querySelectorAll('.yearly-price').forEach(function(e){e.style.display='none';});document.getElementById('btn-monthly').style.cssText='padding:10px 28px;border-radius:100px;font-size:14px;font-weight:600;cursor:pointer;border:2px solid #c2185b;background:#c2185b;color:#fff';document.getElementById('btn-yearly').style.cssText='padding:10px 28px;border-radius:100px;font-size:14px;font-weight:600;cursor:pointer;border:2px solid #c2185b;background:#fff;color:#c2185b';}
-      function showYearly(){document.querySelectorAll('.monthly-price').forEach(function(e){e.style.display='none';});document.querySelectorAll('.yearly-price').forEach(function(e){e.style.display='';});document.getElementById('btn-yearly').style.cssText='padding:10px 28px;border-radius:100px;font-size:14px;font-weight:600;cursor:pointer;border:2px solid #c2185b;background:#c2185b;color:#fff';document.getElementById('btn-monthly').style.cssText='padding:10px 28px;border-radius:100px;font-size:14px;font-weight:600;cursor:pointer;border:2px solid #c2185b;background:#fff;color:#c2185b';}
+      function showMonthly(){document.querySelectorAll('.monthly-price').forEach(function(e){e.style.display='';});document.querySelectorAll('.yearly-price').forEach(function(e){e.style.display='none';});document.getElementById('btn-monthly').style.cssText='padding:10px 28px;border-radius:100px;font-size:14px;font-weight:600;cursor:pointer;border:2px solid #06C755;background:#06C755;color:#fff';document.getElementById('btn-yearly').style.cssText='padding:10px 28px;border-radius:100px;font-size:14px;font-weight:600;cursor:pointer;border:2px solid #06C755;background:#fff;color:#06C755';}
+      function showYearly(){document.querySelectorAll('.monthly-price').forEach(function(e){e.style.display='none';});document.querySelectorAll('.yearly-price').forEach(function(e){e.style.display='';});document.getElementById('btn-yearly').style.cssText='padding:10px 28px;border-radius:100px;font-size:14px;font-weight:600;cursor:pointer;border:2px solid #06C755;background:#06C755;color:#fff';document.getElementById('btn-monthly').style.cssText='padding:10px 28px;border-radius:100px;font-size:14px;font-weight:600;cursor:pointer;border:2px solid #06C755;background:#fff;color:#06C755';}
       </script>
     </section>
 
@@ -1067,7 +1065,7 @@
       <div class="cta-actions">
         <a href="https://line.me/R/ti/p/@102fuvbt" target="_blank" rel="noopener" target="_blank" class="btn-primary">
           <svg class="line-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="24" height="24" rx="6" fill="#d63384"/>
+            <rect width="24" height="24" rx="6" fill="#06C755"/>
             <path d="M12 5C7.58 5 4 8.13 4 12.02c0 2.62 1.65 4.92 4.12 6.24-.18.67-.49 1.73-.49 1.75 0 .05.02.1.06.14a.21.21 0 0 0 .15.05.2.2 0 0 0 .12-.04c.16-.11 2-.32 2.82-1.86A9.27 9.27 0 0 0 12 18.3c4.42 0 8-3.13 8-7.28S16.42 3.74 12 3.74z" fill="white"/>
           </svg>
           LINE公式アカウントを追加する
