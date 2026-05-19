@@ -36,8 +36,8 @@
     }
 
     body {
-      background: var(--bg-primary);
-      color: var(--text-primary);
+      background: #fff;
+      color: #1a1a2e;
       font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', -apple-system, sans-serif;
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
@@ -64,16 +64,16 @@
       font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', -apple-system, sans-serif;
       font-weight: 800;
       font-size: 18px;
-      color: var(--green-primary);
+      color: #c2185b;
       letter-spacing: -0.5px;
     }
 
     .nav-logo span {
-      color: var(--text-primary);
+      color: #1a1a2e;
     }
 
     .nav-cta {
-      background: var(--green-primary);
+      background: #c2185b;
       color: #000;
       border: none;
       padding: 10px 20px;
@@ -126,7 +126,7 @@
       padding: 8px 16px;
       font-size: 12px;
       font-weight: 500;
-      color: var(--green-primary);
+      color: #c2185b;
       margin-bottom: 32px;
       letter-spacing: 0.5px;
     }
@@ -152,16 +152,20 @@
     }
 
     .hero h1 .highlight {
-      color: var(--green-primary);
+      background: linear-gradient(135deg, #e91e8c, #9c27b0);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
     }
 
     .hero-sub {
       font-size: clamp(16px, 3vw, 20px);
-      color: var(--text-secondary);
-      max-width: 560px;
-      margin-bottom: 48px;
-      font-weight: 400;
-      line-height: 1.8;
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 40px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
     }
 
     .hero-actions {
@@ -178,7 +182,7 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      background: var(--green-primary);
+      background: #c2185b;
       color: #000;
       border: none;
       padding: 18px 32px;
@@ -207,20 +211,20 @@
 
     .btn-secondary {
       display: block;
-      color: var(--text-secondary);
+      color: #444;
       font-size: 14px;
       text-decoration: none;
       transition: color 0.2s;
     }
 
     .btn-secondary:hover {
-      color: var(--text-primary);
+      color: #1a1a2e;
     }
 
     .hero-note {
       margin-top: 8px;
       font-size: 12px;
-      color: var(--text-muted);
+      color: #888;
     }
 
     /* SOCIAL PROOF */
@@ -241,14 +245,14 @@
     .stat-num {
       font-size: 28px;
       font-weight: 900;
-      color: var(--green-primary);
+      color: #c2185b;
       font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', -apple-system, sans-serif;
       letter-spacing: -1px;
     }
 
     .stat-label {
       font-size: 12px;
-      color: var(--text-muted);
+      color: #888;
       margin-top: 4px;
     }
 
@@ -263,7 +267,7 @@
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 2px;
-      color: var(--green-primary);
+      color: #c2185b;
       text-transform: uppercase;
       margin-bottom: 16px;
     }
@@ -278,7 +282,7 @@
 
     .section-desc {
       font-size: 17px;
-      color: var(--text-secondary);
+      color: #444;
       max-width: 600px;
       line-height: 1.9;
     }
@@ -292,7 +296,7 @@
     }
 
     .problem-card {
-      background: var(--bg-card);
+      background: #fff;
       border: 1px solid var(--border-subtle);
       border-radius: 16px;
       padding: 28px;
@@ -320,18 +324,18 @@
       font-size: 16px;
       font-weight: 700;
       margin-bottom: 10px;
-      color: var(--text-primary);
+      color: #1a1a2e;
     }
 
     .problem-desc {
       font-size: 14px;
-      color: var(--text-muted);
+      color: #888;
       line-height: 1.7;
     }
 
     /* FEATURES */
     .features-section {
-      background: var(--bg-secondary);
+      background: #faf5ff;
       padding: 100px 0;
     }
 
@@ -349,7 +353,7 @@
     }
 
     .feature-card {
-      background: var(--bg-primary);
+      background: #fff;
       border: 1px solid var(--border);
       border-radius: 20px;
       padding: 32px;
@@ -401,7 +405,7 @@
 
     .feature-desc {
       font-size: 14px;
-      color: var(--text-secondary);
+      color: #444;
       line-height: 1.8;
     }
 
@@ -415,7 +419,7 @@
     .feature-tag {
       background: rgba(214, 51, 132, 0.06);
       border: 1px solid var(--border);
-      color: var(--green-primary);
+      color: #c2185b;
       padding: 4px 12px;
       border-radius: 100px;
       font-size: 11px;
@@ -464,7 +468,7 @@
     .step-num {
       width: 56px;
       height: 56px;
-      background: var(--bg-card);
+      background: #fff;
       border: 1px solid var(--border);
       border-radius: 50%;
       display: flex;
@@ -472,7 +476,7 @@
       justify-content: center;
       font-size: 18px;
       font-weight: 900;
-      color: var(--green-primary);
+      color: #c2185b;
       font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', -apple-system, sans-serif;
       flex-shrink: 0;
       position: relative;
@@ -492,13 +496,13 @@
 
     .step-desc {
       font-size: 14px;
-      color: var(--text-secondary);
+      color: #444;
       line-height: 1.8;
     }
 
     /* PRICING */
     .pricing-section {
-      background: var(--bg-secondary);
+      background: #faf5ff;
       padding: 100px 0;
     }
 
@@ -517,7 +521,7 @@
     }
 
     .pricing-card {
-      background: var(--bg-primary);
+      background: #fff;
       border: 1px solid var(--border-subtle);
       border-radius: 24px;
       padding: 36px;
@@ -529,7 +533,7 @@
 
     .pricing-card.featured {
       background: linear-gradient(160deg, #0a2a12, #111);
-      border-color: var(--green-primary);
+      border-color: #c2185b;
       transform: scale(1.02);
       box-shadow: 0 0 80px rgba(214, 51, 132, 0.15);
     }
@@ -544,7 +548,7 @@
       top: -14px;
       left: 50%;
       transform: translateX(-50%);
-      background: var(--green-primary);
+      background: #c2185b;
       color: #000;
       font-size: 11px;
       font-weight: 800;
@@ -559,7 +563,7 @@
       font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: var(--text-muted);
+      color: #888;
       margin-bottom: 8px;
     }
 
@@ -584,7 +588,7 @@
 
     .plan-cycle {
       font-size: 13px;
-      color: var(--text-muted);
+      color: #888;
       margin-bottom: 28px;
     }
 
@@ -605,25 +609,25 @@
       align-items: flex-start;
       gap: 10px;
       font-size: 14px;
-      color: var(--text-secondary);
+      color: #444;
       margin-bottom: 12px;
     }
 
     .plan-features li::before {
       content: '✓';
-      color: var(--green-primary);
+      color: #c2185b;
       font-weight: 700;
       margin-top: 1px;
       flex-shrink: 0;
     }
 
     .plan-features li.disabled {
-      color: var(--text-muted);
+      color: #888;
     }
 
     .plan-features li.disabled::before {
       content: '–';
-      color: var(--text-muted);
+      color: #888;
     }
 
     .plan-btn {
@@ -639,7 +643,7 @@
     }
 
     .plan-btn-primary {
-      background: var(--green-primary);
+      background: #c2185b;
       color: #000;
     }
 
@@ -649,13 +653,13 @@
 
     .plan-btn-secondary {
       background: rgba(0,0,0,0.04);
-      color: var(--text-secondary);
+      color: #444;
       border: 1px solid var(--border-subtle);
     }
 
     .plan-btn-secondary:hover {
       background: rgba(0,0,0,0.08);
-      color: var(--text-primary);
+      color: #1a1a2e;
     }
 
     /* CTA FINAL */
@@ -694,7 +698,7 @@
 
     .cta-desc {
       font-size: 16px;
-      color: var(--text-secondary);
+      color: #444;
       margin-bottom: 48px;
       line-height: 1.8;
     }
@@ -719,13 +723,13 @@
       font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', -apple-system, sans-serif;
       font-weight: 800;
       font-size: 16px;
-      color: var(--green-primary);
+      color: #c2185b;
       margin-bottom: 8px;
     }
 
     .footer-sub {
       font-size: 12px;
-      color: var(--text-muted);
+      color: #888;
     }
 
     .footer-sub a {
@@ -756,7 +760,15 @@
 
     .hero-badge { animation: fadeInUp 0.5s ease both; }
     .hero h1 { animation: fadeInUp 0.6s ease both 0.1s; }
-    .hero-sub { animation: fadeInUp 0.6s ease both 0.2s; }
+    .hero-sub {
+      font-size: clamp(16px, 3vw, 20px);
+      color: #555;
+      line-height: 1.7;
+      margin-bottom: 40px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
     .hero-actions { animation: fadeInUp 0.6s ease both 0.3s; }
 
     .line-gradient {
@@ -777,16 +789,16 @@
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-badge">AIマネージャー β版 先行受付中</div>
+    <div class="hero-badge">β版 先行受付中</div>
     <h1>
       インフルエンサーの<br>
-      案件管理、<span class="highlight">もう</span><br>
-      <span class="highlight">自分でやらなくていい。</span>
+      仕事管理、<span class="highlight">もう</span><br>
+      <span class="highlight">抜け漏れしない。</span>
     </h1>
     <p class="hero-sub">
-      LINEにBotを追加するだけ。<br>
-      オファーの受付から請求書の発行まで、<br>
-      AIが全部まとめて引き受けます。
+      「高橋 徹 | GVA」を追加するだけ。<br>
+      オファーから請求書まで、<br>
+      LINEで一元管理できます。
     </p>
     <div class="hero-actions">
       <a href="https://line.me/R/ti/p/@102fuvbt" target="_blank" rel="noopener" class="btn-primary">
@@ -794,7 +806,7 @@
           <rect width="24" height="24" rx="6" fill="#d63384"/>
           <path d="M12 5C7.58 5 4 8.13 4 12.02c0 2.62 1.65 4.92 4.12 6.24-.18.67-.49 1.73-.49 1.75 0 .05.02.1.06.14a.21.21 0 0 0 .15.05.2.2 0 0 0 .12-.04c.16-.11 2-.32 2.82-1.86A9.27 9.27 0 0 0 12 18.3c4.42 0 8-3.13 8-7.28S16.42 3.74 12 3.74z" fill="white"/>
         </svg>
-        LINE公式アカウントを追加する
+        「高橋 徹 | GVA」を追加する
       </a>
       <a href="#pricing" class="btn-secondary">料金プランを確認する →</a>
       <p class="hero-note">クレジットカード不要・永久無料プランあり</p>
@@ -1059,7 +1071,7 @@
             <rect width="24" height="24" rx="6" fill="#d63384"/>
             <path d="M12 5C7.58 5 4 8.13 4 12.02c0 2.62 1.65 4.92 4.12 6.24-.18.67-.49 1.73-.49 1.75 0 .05.02.1.06.14a.21.21 0 0 0 .15.05.2.2 0 0 0 .12-.04c.16-.11 2-.32 2.82-1.86A9.27 9.27 0 0 0 12 18.3c4.42 0 8-3.13 8-7.28S16.42 3.74 12 3.74z" fill="white"/>
           </svg>
-          LINE公式アカウントを追加する
+          「高橋 徹 | GVA」を追加する
         </a>
         <a href="#pricing" class="btn-secondary">プランの詳細を見る →</a>
       </div>
