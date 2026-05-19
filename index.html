@@ -772,7 +772,7 @@
   <!-- NAV -->
   <nav>
     <div class="nav-logo">GVA<span> Manager</span></div>
-    <a href="#cta" class="nav-cta">無料で始める</a>
+    <a href="https://line.me/R/ti/p/@102fuvbt" target="_blank" rel="noopener" class="nav-cta">無料で始める</a>
   </nav>
 
   <!-- HERO -->
@@ -789,7 +789,7 @@
       AIが全部まとめて引き受けます。
     </p>
     <div class="hero-actions">
-      <a href="#cta" class="btn-primary">
+      <a href="https://line.me/R/ti/p/@102fuvbt" target="_blank" rel="noopener" class="btn-primary">
         <svg class="line-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="24" height="24" rx="6" fill="#d63384"/>
           <path d="M12 5C7.58 5 4 8.13 4 12.02c0 2.62 1.65 4.92 4.12 6.24-.18.67-.49 1.73-.49 1.75 0 .05.02.1.06.14a.21.21 0 0 0 .15.05.2.2 0 0 0 .12-.04c.16-.11 2-.32 2.82-1.86A9.27 9.27 0 0 0 12 18.3c4.42 0 8-3.13 8-7.28S16.42 3.74 12 3.74z" fill="white"/>
@@ -958,68 +958,106 @@
 
   <!-- PRICING -->
   <section class="pricing-section" id="pricing">
-    <div class="pricing-inner">
-      <p class="section-label">料金プラン</p>
-      <h2 class="section-title">まずは無料で試してみて</h2>
-      <p class="section-desc">
-        クレジットカードなし。必要になったらアップグレードすればOK。
-      </p>
+      <div class="pricing-inner">
+        <h2 class="section-title">シンプルな料金プラン</h2>
+        <p class="section-subtitle">まずは無料で試して、必要になったらアップグレード</p>
 
-      <div class="pricing-grid">
-        <!-- FREE -->
-        <div class="pricing-card">
-          <div class="plan-name">Free</div>
-          <div class="plan-price"><span class="free-text">¥0</span></div>
-          <div class="plan-cycle">ずっと無料</div>
-          <div class="plan-divider"></div>
-          <ul class="plan-features">
-            <li>案件管理（3件まで）</li>
-            <li>基本リマインド機能</li>
-            <li>LINEチャット対応</li>
-            <li class="disabled">AI自動解析</li>
-            <li class="disabled">請求書自動発行</li>
-            <li class="disabled">収支ダッシュボード</li>
-          </ul>
-          <a href="#cta" class="plan-btn plan-btn-secondary">無料で始める</a>
+        <div style="display:flex;justify-content:center;gap:12px;margin:32px 0 48px;flex-wrap:wrap">
+          <button onclick="showMonthly()" id="btn-monthly" style="padding:10px 28px;border-radius:100px;font-size:14px;font-weight:600;cursor:pointer;border:2px solid #d63384;background:#d63384;color:#fff;transition:all .2s">月払い</button>
+          <button onclick="showYearly()" id="btn-yearly" style="padding:10px 28px;border-radius:100px;font-size:14px;font-weight:600;cursor:pointer;border:2px solid #d63384;background:#fff;color:#d63384;transition:all .2s">
+            年払い <span style="background:#ffec99;color:#333;font-size:11px;padding:2px 8px;border-radius:100px;margin-left:4px">1ヶ月無料</span>
+          </button>
         </div>
 
-        <!-- PRO (FEATURED) -->
-        <div class="pricing-card featured">
-          <div class="featured-badge">🔥 一番人気</div>
-          <div class="plan-name">Pro</div>
-          <div class="plan-price">¥1,980<span>/月</span></div>
-          <div class="plan-cycle">年払いで2ヶ月分無料</div>
-          <div class="plan-divider"></div>
-          <ul class="plan-features">
-            <li>案件管理（無制限）</li>
-            <li>AIによる自動フェーズ管理</li>
-            <li>投稿期限リマインド（全タイミング）</li>
-            <li>請求書自動発行・PDF保存</li>
-            <li>案件・収支ダッシュボード</li>
-            <li class="disabled">月次レポート</li>
-          </ul>
-          <a href="#cta" class="plan-btn plan-btn-primary">14日間無料で試す</a>
+        <div class="pricing-grid">
+
+          <!-- Free -->
+          <div class="pricing-card">
+            <div class="plan-badge">Free</div>
+            <div class="plan-name">はじめよう</div>
+            <div class="plan-price-wrap">
+              <div class="plan-price">¥0<span class="plan-period">/月</span></div>
+            </div>
+            <div class="plan-description">まずは気軽に試してみたい方へ</div>
+            <ul class="plan-features">
+              <li class="plan-feature">✓ 同時進行案件 3件まで</li>
+              <li class="plan-feature">✓ LINEでコマンド操作</li>
+              <li class="plan-feature">✓ 基本的なフェーズ管理</li>
+              <li class="plan-feature" style="opacity:0.4">✗ 自動リマインド</li>
+              <li class="plan-feature" style="opacity:0.4">✗ 請求書発行</li>
+              <li class="plan-feature" style="opacity:0.4">✗ AI自動解析</li>
+            </ul>
+            <a href="https://line.me/R/ti/p/@102fuvbt" target="_blank" rel="noopener" class="plan-btn plan-btn-secondary">無料で始める</a>
+          </div>
+
+          <!-- Pro -->
+          <div class="pricing-card featured">
+            <div class="plan-badge popular">人気No.1</div>
+            <div class="plan-name">Pro</div>
+            <div class="plan-price-wrap">
+              <div class="plan-price monthly-price">¥1,980<span class="plan-period">/月</span></div>
+              <div class="plan-price yearly-price" style="display:none">¥21,780<span class="plan-period">/年</span>
+                <div style="font-size:13px;color:#d63384;font-weight:600;margin-top:4px">（月払い比 1ヶ月分お得）</div>
+              </div>
+            </div>
+            <div class="plan-description">本格的に案件管理を効率化したいインフルエンサーへ</div>
+            <ul class="plan-features">
+              <li class="plan-feature">✓ 案件数 <strong>無制限</strong></li>
+              <li class="plan-feature">✓ <strong>投稿リマインド自動送信</strong>（3日前・前日・当日）</li>
+              <li class="plan-feature">✓ <strong>請求書自動発行</strong>・PDF保存・クライアント共有</li>
+              <li class="plan-feature">✓ <strong>グループLINEをAIで自動監視</strong>（承認・修正・期限を検出）</li>
+              <li class="plan-feature">✓ 管理ダッシュボード（LINE認証でログイン）</li>
+              <li class="plan-feature">✓ 5グループLINEまで対応</li>
+              <li class="plan-feature" style="opacity:0.4">✗ 月次レポート</li>
+            </ul>
+            <a href="https://line.me/R/ti/p/@102fuvbt" target="_blank" rel="noopener" class="plan-btn plan-btn-primary">14日間無料で試す</a>
+          </div>
+
+          <!-- Premium -->
+          <div class="pricing-card">
+            <div class="plan-badge">Premium</div>
+            <div class="plan-name">プレミアム</div>
+            <div class="plan-price-wrap">
+              <div class="plan-price monthly-price">¥3,980<span class="plan-period">/月</span></div>
+              <div class="plan-price yearly-price" style="display:none">¥43,780<span class="plan-period">/年</span>
+                <div style="font-size:13px;color:#9c27b0;font-weight:600;margin-top:4px">（月払い比 1ヶ月分お得）</div>
+              </div>
+            </div>
+            <div class="plan-description">複数ブランドを掛け持ちするトップインフルエンサーへ</div>
+            <ul class="plan-features">
+              <li class="plan-feature">✓ Proのすべての機能</li>
+              <li class="plan-feature">✓ グループLINE <strong>無制限</strong>対応</li>
+              <li class="plan-feature">✓ <strong>月次レポート自動送信</strong>（毎月1日）</li>
+              <li class="plan-feature">✓ 案件・収支の月別集計</li>
+              <li class="plan-feature">✓ 優先サポート</li>
+            </ul>
+            <a href="https://line.me/R/ti/p/@102fuvbt" target="_blank" rel="noopener" class="plan-btn plan-btn-secondary">14日間無料で試す</a>
+          </div>
+
         </div>
 
-        <!-- PREMIUM -->
-        <div class="pricing-card">
-          <div class="plan-name">Premium</div>
-          <div class="plan-price">¥3,980<span>/月</span></div>
-          <div class="plan-cycle">年払いで2ヶ月分無料</div>
-          <div class="plan-divider"></div>
-          <ul class="plan-features">
-            <li>Proの全機能</li>
-            <li>月次活動レポート自動生成</li>
-            <li>クライアント別収益分析</li>
-            <li>優先サポート</li>
-            <li>収益最適化アドバイス（AI）</li>
-            <li>カスタムリマインド設定</li>
-          </ul>
-          <a href="#cta" class="plan-btn plan-btn-secondary">14日間無料で試す</a>
-        </div>
+        <p style="text-align:center;margin-top:32px;font-size:13px;color:#888">すべてのプランに14日間の無料トライアルがついています。クレジットカードなしで始められます。</p>
       </div>
-    </div>
-  </section>
+
+      <script>
+      function showMonthly() {
+        document.querySelectorAll('.monthly-price').forEach(el => el.style.display = '');
+        document.querySelectorAll('.yearly-price').forEach(el => el.style.display = 'none');
+        document.getElementById('btn-monthly').style.background = '#d63384';
+        document.getElementById('btn-monthly').style.color = '#fff';
+        document.getElementById('btn-yearly').style.background = '#fff';
+        document.getElementById('btn-yearly').style.color = '#d63384';
+      }
+      function showYearly() {
+        document.querySelectorAll('.monthly-price').forEach(el => el.style.display = 'none');
+        document.querySelectorAll('.yearly-price').forEach(el => el.style.display = '');
+        document.getElementById('btn-yearly').style.background = '#d63384';
+        document.getElementById('btn-yearly').style.color = '#fff';
+        document.getElementById('btn-monthly').style.background = '#fff';
+        document.getElementById('btn-monthly').style.color = '#d63384';
+      }
+      </script>
+    </section>
 
   <!-- FINAL CTA -->
   <section class="cta-section" id="cta">
