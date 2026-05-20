@@ -3,26 +3,26 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GVA Manager | インフルエンサーのお仕事管理、LINEだけで完結</title>
+  <title>GVA Manager Bot | LINEで完結するインフルエンサー案件管理AI</title>
   <meta name="description" content="LINEにBotを追加するだけ。オファーから請求書発行まで、インフルエンサーの案件管理をすべて自動化するAIマネージャー。">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-primary: #ffffff;
-      --bg-secondary: #f4fdf7;
-      --bg-card: #ffffff;
-      --bg-card2: #f4fdf7;
-      --green-primary: #06C755;
-      --green-dark: #05a847;
-      --green-glow: rgba(6, 199, 85, 0.1);
-      --green-glow-strong: rgba(6, 199, 85, 0.2);
-      --text-primary: #1a1a1a;
-      --text-secondary: #444;
-      --text-muted: #888;
-      --border: rgba(6, 199, 85, 0.2);
-      --border-subtle: rgba(0,0,0,0.06);
+      --bg-primary: #050a05;
+      --bg-secondary: #0a1a0a;
+      --bg-card: #0f1f0f;
+      --bg-card2: #101810;
+      --green-primary: #00e676;
+      --green-dark: #00c853;
+      --green-glow: rgba(0, 230, 118, 0.15);
+      --green-glow-strong: rgba(0, 230, 118, 0.3);
+      --text-primary: #f0f0f0;
+      --text-secondary: #a0a8a0;
+      --text-muted: #606860;
+      --border: rgba(0, 230, 118, 0.15);
+      --border-subtle: rgba(255, 255, 255, 0.06);
     }
 
     * {
@@ -36,9 +36,9 @@
     }
 
     body {
-      background: #fff;
-      color: #1a1a1a;
-      font-family: 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', -apple-system, sans-serif;
+      background: var(--bg-primary);
+      color: var(--text-primary);
+      font-family: 'Noto Sans JP', 'Inter', sans-serif;
       line-height: 1.7;
       -webkit-font-smoothing: antialiased;
       overflow-x: hidden;
@@ -55,25 +55,25 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(250,250,252,0.9);
+      background: rgba(5, 10, 5, 0.85);
       backdrop-filter: blur(20px);
       border-bottom: 1px solid var(--border-subtle);
     }
 
     .nav-logo {
-      font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', -apple-system, sans-serif;
+      font-family: 'Inter', sans-serif;
       font-weight: 800;
       font-size: 18px;
-      color: #06C755;
+      color: var(--green-primary);
       letter-spacing: -0.5px;
     }
 
     .nav-logo span {
-      color: #1a1a1a;
+      color: var(--text-primary);
     }
 
     .nav-cta {
-      background: #06C755;
+      background: var(--green-primary);
       color: #000;
       border: none;
       padding: 10px 20px;
@@ -87,7 +87,7 @@
     }
 
     .nav-cta:hover {
-      background: #111;
+      background: #fff;
       transform: scale(1.03);
     }
 
@@ -112,7 +112,7 @@
       transform: translateX(-50%);
       width: 700px;
       height: 700px;
-      background: radial-gradient(circle, rgba(6, 199, 85, 0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(0, 230, 118, 0.12) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -120,13 +120,13 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(6, 199, 85, 0.06);
+      background: rgba(0, 230, 118, 0.08);
       border: 1px solid var(--border);
       border-radius: 100px;
       padding: 8px 16px;
       font-size: 12px;
       font-weight: 500;
-      color: #06C755;
+      color: var(--green-primary);
       margin-bottom: 32px;
       letter-spacing: 0.5px;
     }
@@ -152,18 +152,16 @@
     }
 
     .hero h1 .highlight {
-      color: #06C755;
-      -webkit-text-fill-color: #06C755;
+      color: var(--green-primary);
     }
 
     .hero-sub {
       font-size: clamp(16px, 3vw, 20px);
-      color: #555;
-      line-height: 1.7;
-      margin-bottom: 40px;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
+      color: var(--text-secondary);
+      max-width: 560px;
+      margin-bottom: 48px;
+      font-weight: 400;
+      line-height: 1.8;
     }
 
     .hero-actions {
@@ -180,7 +178,7 @@
       align-items: center;
       justify-content: center;
       gap: 10px;
-      background: #06C755;
+      background: var(--green-primary);
       color: #000;
       border: none;
       padding: 18px 32px;
@@ -196,7 +194,7 @@
     }
 
     .btn-primary:hover {
-      background: #111;
+      background: #fff;
       transform: translateY(-2px);
       box-shadow: 0 0 60px rgba(0, 230, 118, 0.4);
     }
@@ -209,20 +207,20 @@
 
     .btn-secondary {
       display: block;
-      color: #444;
+      color: var(--text-secondary);
       font-size: 14px;
       text-decoration: none;
       transition: color 0.2s;
     }
 
     .btn-secondary:hover {
-      color: #1a1a1a;
+      color: var(--text-primary);
     }
 
     .hero-note {
       margin-top: 8px;
       font-size: 12px;
-      color: #888;
+      color: var(--text-muted);
     }
 
     /* SOCIAL PROOF */
@@ -243,14 +241,14 @@
     .stat-num {
       font-size: 28px;
       font-weight: 900;
-      color: #06C755;
-      font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', -apple-system, sans-serif;
+      color: var(--green-primary);
+      font-family: 'Inter', sans-serif;
       letter-spacing: -1px;
     }
 
     .stat-label {
       font-size: 12px;
-      color: #888;
+      color: var(--text-muted);
       margin-top: 4px;
     }
 
@@ -265,7 +263,7 @@
       font-size: 11px;
       font-weight: 700;
       letter-spacing: 2px;
-      color: #06C755;
+      color: var(--green-primary);
       text-transform: uppercase;
       margin-bottom: 16px;
     }
@@ -280,7 +278,7 @@
 
     .section-desc {
       font-size: 17px;
-      color: #444;
+      color: var(--text-secondary);
       max-width: 600px;
       line-height: 1.9;
     }
@@ -294,7 +292,7 @@
     }
 
     .problem-card {
-      background: #fff;
+      background: var(--bg-card);
       border: 1px solid var(--border-subtle);
       border-radius: 16px;
       padding: 28px;
@@ -309,7 +307,7 @@
       left: 0;
       right: 0;
       height: 2px;
-      background: linear-gradient(90deg, transparent, rgba(0,0,0,0.06), transparent);
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
     }
 
     .problem-emoji {
@@ -322,18 +320,18 @@
       font-size: 16px;
       font-weight: 700;
       margin-bottom: 10px;
-      color: #1a1a1a;
+      color: var(--text-primary);
     }
 
     .problem-desc {
       font-size: 14px;
-      color: #888;
+      color: var(--text-muted);
       line-height: 1.7;
     }
 
     /* FEATURES */
     .features-section {
-      background: #faf5ff;
+      background: var(--bg-secondary);
       padding: 100px 0;
     }
 
@@ -351,7 +349,7 @@
     }
 
     .feature-card {
-      background: #fff;
+      background: var(--bg-primary);
       border: 1px solid var(--border);
       border-radius: 20px;
       padding: 32px;
@@ -384,7 +382,7 @@
     .feature-icon {
       width: 52px;
       height: 52px;
-      background: rgba(6, 199, 85, 0.08);
+      background: rgba(0, 230, 118, 0.1);
       border-radius: 14px;
       display: flex;
       align-items: center;
@@ -403,7 +401,7 @@
 
     .feature-desc {
       font-size: 14px;
-      color: #444;
+      color: var(--text-secondary);
       line-height: 1.8;
     }
 
@@ -415,9 +413,9 @@
     }
 
     .feature-tag {
-      background: rgba(6, 199, 85, 0.06);
+      background: rgba(0, 230, 118, 0.08);
       border: 1px solid var(--border);
-      color: #06C755;
+      color: var(--green-primary);
       padding: 4px 12px;
       border-radius: 100px;
       font-size: 11px;
@@ -466,7 +464,7 @@
     .step-num {
       width: 56px;
       height: 56px;
-      background: #fff;
+      background: var(--bg-card);
       border: 1px solid var(--border);
       border-radius: 50%;
       display: flex;
@@ -474,8 +472,8 @@
       justify-content: center;
       font-size: 18px;
       font-weight: 900;
-      color: #06C755;
-      font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', -apple-system, sans-serif;
+      color: var(--green-primary);
+      font-family: 'Inter', sans-serif;
       flex-shrink: 0;
       position: relative;
       z-index: 1;
@@ -494,13 +492,13 @@
 
     .step-desc {
       font-size: 14px;
-      color: #444;
+      color: var(--text-secondary);
       line-height: 1.8;
     }
 
     /* PRICING */
     .pricing-section {
-      background: #faf5ff;
+      background: var(--bg-secondary);
       padding: 100px 0;
     }
 
@@ -519,7 +517,7 @@
     }
 
     .pricing-card {
-      background: #fff;
+      background: var(--bg-primary);
       border: 1px solid var(--border-subtle);
       border-radius: 24px;
       padding: 36px;
@@ -530,10 +528,10 @@
     }
 
     .pricing-card.featured {
-      background: linear-gradient(180deg, #ffffff 0%, #f0fdf4 100%);
-      border-color: #06C755;
+      background: linear-gradient(160deg, #0a2a12, #051005);
+      border-color: var(--green-primary);
       transform: scale(1.02);
-      box-shadow: 0 0 80px rgba(6, 199, 85, 0.15);
+      box-shadow: 0 0 80px rgba(0, 230, 118, 0.2);
     }
 
     .pricing-card:not(.featured):hover {
@@ -546,7 +544,7 @@
       top: -14px;
       left: 50%;
       transform: translateX(-50%);
-      background: #06C755;
+      background: var(--green-primary);
       color: #000;
       font-size: 11px;
       font-weight: 800;
@@ -561,7 +559,7 @@
       font-weight: 700;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: #888;
+      color: var(--text-muted);
       margin-bottom: 8px;
     }
 
@@ -569,7 +567,7 @@
       font-size: 48px;
       font-weight: 900;
       letter-spacing: -2px;
-      font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', -apple-system, sans-serif;
+      font-family: 'Inter', sans-serif;
       line-height: 1;
       margin-bottom: 6px;
     }
@@ -586,7 +584,7 @@
 
     .plan-cycle {
       font-size: 13px;
-      color: #888;
+      color: var(--text-muted);
       margin-bottom: 28px;
     }
 
@@ -607,25 +605,25 @@
       align-items: flex-start;
       gap: 10px;
       font-size: 14px;
-      color: #444;
+      color: var(--text-secondary);
       margin-bottom: 12px;
     }
 
     .plan-features li::before {
       content: '✓';
-      color: #06C755;
+      color: var(--green-primary);
       font-weight: 700;
       margin-top: 1px;
       flex-shrink: 0;
     }
 
     .plan-features li.disabled {
-      color: #888;
+      color: var(--text-muted);
     }
 
     .plan-features li.disabled::before {
       content: '–';
-      color: #888;
+      color: var(--text-muted);
     }
 
     .plan-btn {
@@ -641,23 +639,23 @@
     }
 
     .plan-btn-primary {
-      background: #06C755;
+      background: var(--green-primary);
       color: #000;
     }
 
     .plan-btn-primary:hover {
-      background: #111;
+      background: #fff;
     }
 
     .plan-btn-secondary {
-      background: rgba(0,0,0,0.04);
-      color: #444;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-secondary);
       border: 1px solid var(--border-subtle);
     }
 
     .plan-btn-secondary:hover {
-      background: rgba(0,0,0,0.08);
-      color: #1a1a1a;
+      background: rgba(255, 255, 255, 0.1);
+      color: var(--text-primary);
     }
 
     /* CTA FINAL */
@@ -676,7 +674,7 @@
       transform: translateX(-50%);
       width: 600px;
       height: 600px;
-      background: radial-gradient(circle, rgba(6, 199, 85, 0.08) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(0, 230, 118, 0.1) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -696,7 +694,7 @@
 
     .cta-desc {
       font-size: 16px;
-      color: #444;
+      color: var(--text-secondary);
       margin-bottom: 48px;
       line-height: 1.8;
     }
@@ -718,16 +716,16 @@
     }
 
     .footer-logo {
-      font-family: 'Hiragino Kaku Gothic ProN', 'Noto Sans JP', -apple-system, sans-serif;
+      font-family: 'Inter', sans-serif;
       font-weight: 800;
       font-size: 16px;
-      color: #06C755;
+      color: var(--green-primary);
       margin-bottom: 8px;
     }
 
     .footer-sub {
       font-size: 12px;
-      color: #888;
+      color: var(--text-muted);
     }
 
     .footer-sub a {
@@ -758,19 +756,11 @@
 
     .hero-badge { animation: fadeInUp 0.5s ease both; }
     .hero h1 { animation: fadeInUp 0.6s ease both 0.1s; }
-    .hero-sub {
-      font-size: clamp(16px, 3vw, 20px);
-      color: #555;
-      line-height: 1.7;
-      margin-bottom: 40px;
-      max-width: 500px;
-      margin-left: auto;
-      margin-right: auto;
-    }
+    .hero-sub { animation: fadeInUp 0.6s ease both 0.2s; }
     .hero-actions { animation: fadeInUp 0.6s ease both 0.3s; }
 
     .line-gradient {
-      background: linear-gradient(135deg, #06C755 0%, #06C755 100%);
+      background: linear-gradient(135deg, #06C755 0%, #00e676 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -782,23 +772,24 @@
   <!-- NAV -->
   <nav>
     <div class="nav-logo">GVA<span> Manager</span></div>
-    <a href="https://line.me/R/ti/p/@102fuvbt" target="_blank" rel="noopener" class="nav-cta">無料で始める</a>
+    <a href="#cta" class="nav-cta">無料で始める</a>
   </nav>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-badge">β版 先行受付中</div>
+    <div class="hero-badge">AIマネージャー β版 先行受付中</div>
     <h1>
-      今日から、<span class="highlight">案件管理は</span><br>
-      <span class="highlight">任せよう。</span>
+      インフルエンサーの<br>
+      案件管理、<span class="highlight">もう</span><br>
+      <span class="highlight">自分でやらなくていい。</span>
     </h1>
     <p class="hero-sub">
-      LINEを追加するだけ。<br>
-      スケジュール管理から請求書まで、<br>
-      一元管理できます。
+      今日から、案件管理は任せよう。<br>
+      「高橋 徹 | GVA」をLINEで追加するだけ。<br>
+      オファー受付から請求書発行まで、インフルエンサーの仕事をまるごと自動化。
     </p>
     <div class="hero-actions">
-      <a href="https://line.me/R/ti/p/@102fuvbt" target="_blank" rel="noopener" class="btn-primary">
+      <a href="#cta" class="btn-primary">
         <svg class="line-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect width="24" height="24" rx="6" fill="#06C755"/>
           <path d="M12 5C7.58 5 4 8.13 4 12.02c0 2.62 1.65 4.92 4.12 6.24-.18.67-.49 1.73-.49 1.75 0 .05.02.1.06.14a.21.21 0 0 0 .15.05.2.2 0 0 0 .12-.04c.16-.11 2-.32 2.82-1.86A9.27 9.27 0 0 0 12 18.3c4.42 0 8-3.13 8-7.28S16.42 3.74 12 3.74z" fill="white"/>
@@ -813,12 +804,12 @@
   <!-- SOCIAL PROOF -->
   <div class="social-proof">
     <div class="stat">
-      <div class="stat-num">∞</div>
-      <div class="stat-label">管理できる案件数（Proプラン）</div>
+      <div class="stat-num">10フェーズ</div>
+      <div class="stat-label">案件フェーズ管理</div>
     </div>
     <div class="stat">
-      <div class="stat-num">3h</div>
-      <div class="stat-label">月間の事務作業削減目安</div>
+      <div class="stat-num">4段階</div>
+      <div class="stat-label">自動リマインド通知</div>
     </div>
     <div class="stat">
       <div class="stat-num">0円</div>
@@ -883,47 +874,100 @@
       <div class="features-grid">
         <div class="feature-card">
           <div class="feature-icon">🤖</div>
-          <div class="feature-title">AIによる自動フェーズ管理</div>
+          <div class="feature-title">グループLINEをAIが常時監視</div>
           <div class="feature-desc">
-            グループLINEのやり取りをAIがリアルタイムで解析。「オファー」「交渉中」「受注」「制作中」「投稿済み」を自動で判定・更新します。
+            クライアントとのグループLINEにBotを追加するだけ。クライアントの発言をAIがリアルタイム解析し、承認・修正依頼・期限変更などの重要な動きを1対1チャットに即通知。見落としゼロ。
           </div>
           <div class="feature-tags">
             <span class="feature-tag">AI解析</span>
-            <span class="feature-tag">自動更新</span>
+            <span class="feature-tag">リアルタイム通知</span>
+            <span class="feature-tag">自動検出</span>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📄</div>
+          <div class="feature-title">オリエンシートを送るだけで案件登録</div>
+          <div class="feature-desc">
+            グループLINEにオリエンシート（画像・PDF）が流れてきたら自動で内容を読み取り。案件名・報酬・期限・投稿条件を抽出して「この内容で登録しますか？」と確認するので、手入力不要。
+          </div>
+          <div class="feature-tags">
+            <span class="feature-tag">画像解析</span>
+            <span class="feature-tag">自動抽出</span>
+            <span class="feature-tag">手入力ゼロ</span>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📩</div>
+          <div class="feature-title">オファーをLINEで一元管理</div>
+          <div class="feature-desc">
+            「オファー」ボタンで検討中の案件を一覧表示。番号を選んで「エントリー」「見送り」「受注確定」を送るだけ。条件交渉中・保留中もフェーズで管理できる。
+          </div>
+          <div class="feature-tags">
+            <span class="feature-tag">オファー一覧</span>
+            <span class="feature-tag">エントリー管理</span>
+            <span class="feature-tag">受注確定</span>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📂</div>
+          <div class="feature-title">案件を10フェーズで自動管理</div>
+          <div class="feature-desc">
+            オリエン待ち→構成案→初稿→修正→投稿準備→投稿済み→URL報告→請求書発行→入金確認まで、フェーズを「次へ進める」で更新するだけ。いつどこまで進んでいるかが一目瞭然。
+          </div>
+          <div class="feature-tags">
+            <span class="feature-tag">10フェーズ</span>
+            <span class="feature-tag">進捗管理</span>
+            <span class="feature-tag">自動追跡</span>
           </div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">⏰</div>
-          <div class="feature-title">投稿期限の自動リマインド</div>
+          <div class="feature-title">期限を4段階で自動通知</div>
           <div class="feature-desc">
-            締め切り3日前・前日・当日の朝に自動通知。「あ、忘れてた…」がなくなります。複数案件も全部まとめて管理。
+            各案件フェーズの期限を3日前・前日・当日朝・期限超過の4タイミングで自動通知。複数案件が重なっても抜け漏れなし。「今日」ボタンで今日・明日の期限タスクを即確認できる。
           </div>
           <div class="feature-tags">
-            <span class="feature-tag">3日前通知</span>
-            <span class="feature-tag">前日通知</span>
-            <span class="feature-tag">当日通知</span>
+            <span class="feature-tag">3日前</span>
+            <span class="feature-tag">前日</span>
+            <span class="feature-tag">当日</span>
+            <span class="feature-tag">超過アラート</span>
           </div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">🧾</div>
-          <div class="feature-title">請求書の自動発行</div>
+          <div class="feature-title">請求書の作成・管理がスマホで完結</div>
           <div class="feature-desc">
-            LINEで「請求書発行」と送るだけ。案件情報から自動生成してPDFで届きます。スマホから数秒で完了。
+            「請求書」ボタンでWebダッシュボードのURLを案内。LINEでログインするだけでアクセス可能。請求書の新規作成・編集・PDF保存・ステータス管理（下書き・送付済み・入金済み）が全てスマホから完結。
           </div>
           <div class="feature-tags">
-            <span class="feature-tag">PDF自動生成</span>
-            <span class="feature-tag">スマホ完結</span>
+            <span class="feature-tag">Web管理</span>
+            <span class="feature-tag">PDF出力</span>
+            <span class="feature-tag">LINE認証</span>
+            <span class="feature-tag">入金管理</span>
           </div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">📊</div>
-          <div class="feature-title">案件・収支ダッシュボード</div>
+          <div class="feature-title">毎月1日に前月実績を自動レポート</div>
           <div class="feature-desc">
-            LINE認証でログインするだけ。全案件の進捗・収支・報酬合計が一目でわかるダッシュボードを提供。
+            毎月1日の朝、前月の案件数・完了数・合計報酬額をまとめたレポートが自動でLINEに届く。手動集計一切不要。確定申告や収支管理の参考資料としても使える。
           </div>
           <div class="feature-tags">
-            <span class="feature-tag">LINE認証</span>
-            <span class="feature-tag">収支管理</span>
+            <span class="feature-tag">自動集計</span>
+            <span class="feature-tag">前月実績</span>
+            <span class="feature-tag">毎月1日</span>
+          </div>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">⚙️</div>
+          <div class="feature-title">設定は最初の1回だけ</div>
+          <div class="feature-desc">
+            氏名・住所・銀行口座を「設定」コマンドで登録しておくだけで、以後の請求書に自動反映。案件グループにBotを招待したら、あとは普段通りLINEを使うだけで全自動で動き続ける。
+          </div>
+          <div class="feature-tags">
+            <span class="feature-tag">初回のみ</span>
+            <span class="feature-tag">自動反映</span>
+            <span class="feature-tag">完全放置OK</span>
           </div>
         </div>
       </div>
@@ -934,7 +978,7 @@
   <section>
     <div class="how-section">
       <p class="section-label">使い方</p>
-      <h2 class="section-title">3ステップで始められる</h2>
+      <h2 class="section-title">4ステップで始められる</h2>
       <p class="section-desc" style="margin: 0 auto 0;">
         難しい設定は一切なし。LINEさえあれば今すぐ使えます。
       </p>
@@ -943,22 +987,29 @@
         <div class="step">
           <div class="step-num">1</div>
           <div class="step-content">
-            <div class="step-title">LINE公式アカウントを友達追加</div>
-            <div class="step-desc">「GVA Manager Bot」をLINEで友達追加するだけ。インストール不要・登録不要でその日から使えます。</div>
+            <div class="step-title">LINEを友達追加（1分）</div>
+            <div class="step-desc">「高橋 徹 | GVA」のLINE公式アカウントを友達追加。インストール不要・アプリ不要。</div>
           </div>
         </div>
         <div class="step">
           <div class="step-num">2</div>
           <div class="step-content">
-            <div class="step-title">案件グループにBotを招待</div>
-            <div class="step-desc">クライアントとのグループLINEにBotを追加。以降のやり取りをAIが自動で解析・記録します。</div>
+            <div class="step-title">初期設定を送信（3分）</div>
+            <div class="step-desc">「設定」と送ると登録フォーマットが届く。氏名・住所・銀行口座を1回入力するだけで請求書に自動反映される。</div>
           </div>
         </div>
         <div class="step">
           <div class="step-num">3</div>
           <div class="step-content">
-            <div class="step-title">あとはLINEで話しかけるだけ</div>
-            <div class="step-desc">「今週の案件は？」「請求書発行して」「期限を教えて」——普通に話しかけるだけで全部やってくれます。</div>
+            <div class="step-title">クライアントグループにBotを招待</div>
+            <div class="step-desc">既存のクライアントとのグループLINEに追加するだけ。以後、クライアントのやり取りをAIが自動監視・通知してくれる。</div>
+          </div>
+        </div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <div class="step-content">
+            <div class="step-title">あとは普段通りLINEを使うだけ</div>
+            <div class="step-desc">メニューボタンを押すか、話しかけるだけ。期限リマインドも請求書も月次レポートも、全部Botが勝手にやってくれる。</div>
           </div>
         </div>
       </div>
@@ -967,89 +1018,70 @@
 
   <!-- PRICING -->
   <section class="pricing-section" id="pricing">
-      <div class="pricing-inner">
-        <h2 class="section-title">シンプルな料金プラン</h2>
-        <p class="section-subtitle">まずは無料で試して、必要になったらアップグレード</p>
+    <div class="pricing-inner">
+      <p class="section-label">料金プラン</p>
+      <h2 class="section-title">まずは無料で試してみて</h2>
+      <p class="section-desc">
+        クレジットカードなし。必要になったらアップグレードすればOK。
+      </p>
 
-        <div style="display:flex;justify-content:center;gap:12px;margin:32px 0 48px;flex-wrap:wrap">
-          <button onclick="showMonthly()" id="btn-monthly" style="padding:10px 28px;border-radius:100px;font-size:14px;font-weight:600;cursor:pointer;border:2px solid #06C755;background:#06C755;color:#fff">月払い</button>
-          <button onclick="showYearly()" id="btn-yearly" style="padding:10px 28px;border-radius:100px;font-size:14px;font-weight:600;cursor:pointer;border:2px solid #06C755;background:#fff;color:#06C755">
-            年払い <span style="background:#ffe082;color:#333;font-size:11px;padding:2px 8px;border-radius:100px;margin-left:4px">1ヶ月無料</span>
-          </button>
+      <div class="pricing-grid">
+        <!-- FREE -->
+        <div class="pricing-card">
+          <div class="plan-name">Free</div>
+          <div class="plan-price"><span class="free-text">¥0</span></div>
+          <div class="plan-cycle">永久無料</div>
+          <div class="plan-divider"></div>
+          <ul class="plan-features">
+            <li>案件管理（3件まで）</li>
+            <li>今日・今週のタスク確認</li>
+            <li>オファー管理（受付・見送り）</li>
+            <li>LINEメニュー操作</li>
+            <li class="disabled">AI自動解析・自動登録</li>
+            <li class="disabled">自動リマインド</li>
+            <li class="disabled">請求書ダッシュボード</li>
+            <li class="disabled">月次レポート</li>
+          </ul>
+          <a href="#cta" class="plan-btn plan-btn-secondary">無料で始める</a>
         </div>
 
-        <div class="pricing-grid" style="max-width:900px;margin:0 auto">
-
-          <!-- Free -->
-          <div class="pricing-card" style="background:#fff;border:1px solid #e8e0f0;border-radius:20px;padding:32px 28px">
-            <div style="font-size:12px;font-weight:600;color:#888;letter-spacing:.1em;margin-bottom:8px">FREE</div>
-            <div style="font-size:24px;font-weight:700;color:#1a1a1a;margin-bottom:4px">無料</div>
-            <div style="font-size:13px;color:#888;margin-bottom:24px">まずは気軽にお試し</div>
-            <ul style="list-style:none;padding:0;margin:0 0 28px;display:flex;flex-direction:column;gap:12px">
-              <li style="font-size:14px;color:#444">✅ 案件管理 3件まで</li>
-              <li style="font-size:14px;color:#444">✅ 基本的なLINEコマンド操作</li>
-              <li style="font-size:14px;color:#bbb">❌ 自動リマインド</li>
-              <li style="font-size:14px;color:#bbb">❌ 請求書発行</li>
-              <li style="font-size:14px;color:#bbb">❌ AI自動解析</li>
-            </ul>
-            <a href="https://line.me/R/ti/p/@102fuvbt" target="_blank" rel="noopener" style="display:block;text-align:center;padding:13px;border-radius:12px;border:2px solid #06C755;color:#06C755;font-weight:600;font-size:14px;text-decoration:none">無料で始める</a>
-          </div>
-
-          <!-- Pro -->
-          <div class="pricing-card" style="background:linear-gradient(160deg,#f0fdf4,#e8fdf0);border:2px solid #06C755;border-radius:20px;padding:32px 28px;position:relative">
-            <div style="position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:#06C755;color:#fff;font-size:11px;font-weight:700;padding:4px 16px;border-radius:100px;white-space:nowrap">人気No.1</div>
-            <div style="font-size:12px;font-weight:600;color:#06C755;letter-spacing:.1em;margin-bottom:8px">PRO</div>
-            <div class="monthly-price">
-              <span style="font-size:32px;font-weight:700;color:#1a1a1a">¥1,980</span>
-              <span style="font-size:14px;color:#888">/月</span>
-            </div>
-            <div class="yearly-price" style="display:none">
-              <span style="font-size:32px;font-weight:700;color:#1a1a1a">¥21,780</span>
-              <span style="font-size:14px;color:#888">/年</span>
-              <div style="font-size:12px;color:#06C755;font-weight:600;margin-top:2px">1ヶ月分お得！</div>
-            </div>
-            <div style="font-size:13px;color:#666;margin:8px 0 24px">案件管理を本格的に効率化</div>
-            <ul style="list-style:none;padding:0;margin:0 0 28px;display:flex;flex-direction:column;gap:12px">
-              <li style="font-size:14px;color:#333">✅ 案件管理 <strong>無制限</strong></li>
-              <li style="font-size:14px;color:#333">✅ 投稿リマインド自動送信</li>
-              <li style="font-size:14px;color:#333">✅ 請求書自動発行・PDF保存</li>
-              <li style="font-size:14px;color:#333">✅ グループLINEのAI自動解析</li>
-              <li style="font-size:14px;color:#333">✅ 管理ダッシュボード</li>
-              <li style="font-size:14px;color:#333">✅ 月次レポート</li>
-            </ul>
-            <a href="https://line.me/R/ti/p/@102fuvbt" target="_blank" rel="noopener" style="display:block;text-align:center;padding:14px;border-radius:12px;background:#06C755;color:#fff;font-weight:700;font-size:15px;text-decoration:none">14日間無料で試す</a>
-          </div>
-
-          <!-- Premium -->
-          <div class="pricing-card" style="background:#fff;border:1px solid #e8e0f0;border-radius:20px;padding:32px 28px">
-            <div style="font-size:12px;font-weight:600;color:#05a847;letter-spacing:.1em;margin-bottom:8px">PREMIUM</div>
-            <div class="monthly-price">
-              <span style="font-size:32px;font-weight:700;color:#1a1a1a">¥3,980</span>
-              <span style="font-size:14px;color:#888">/月</span>
-            </div>
-            <div class="yearly-price" style="display:none">
-              <span style="font-size:32px;font-weight:700;color:#1a1a1a">¥43,780</span>
-              <span style="font-size:14px;color:#888">/年</span>
-              <div style="font-size:12px;color:#05a847;font-weight:600;margin-top:2px">1ヶ月分お得！</div>
-            </div>
-            <div style="font-size:13px;color:#666;margin:8px 0 24px">Proの全機能 ＋ 特別サポート</div>
-            <ul style="list-style:none;padding:0;margin:0 0 28px;display:flex;flex-direction:column;gap:12px">
-              <li style="font-size:14px;color:#333">✅ Proのすべての機能</li>
-              <li style="font-size:14px;color:#333">✨ <strong>月1回30分のオンライン相談</strong><br><span style="font-size:12px;color:#888">案件戦略・単価アップなど</span></li>
-              <li style="font-size:14px;color:#333">✨ <strong>GVA案件の優先ご案内</strong></li>
-              <li style="font-size:14px;color:#333">✨ 優先サポート対応</li>
-            </ul>
-            <a href="https://line.me/R/ti/p/@102fuvbt" target="_blank" rel="noopener" style="display:block;text-align:center;padding:13px;border-radius:12px;border:2px solid #05a847;color:#05a847;font-weight:600;font-size:14px;text-decoration:none">14日間無料で試す</a>
-          </div>
-
+        <!-- PRO (FEATURED) -->
+        <div class="pricing-card featured">
+          <div class="featured-badge">🔥 一番人気</div>
+          <div class="plan-name">Pro</div>
+          <div class="plan-price">¥1,980<span>/月</span></div>
+          <div class="plan-cycle">年払いで2ヶ月分無料</div>
+          <div class="plan-divider"></div>
+          <ul class="plan-features">
+            <li>案件管理（無制限）</li>
+            <li>グループLINEのAI自動監視</li>
+            <li>オリエンシートの自動読み取り・案件登録</li>
+            <li>投稿期限リマインド（3日前・前日・当日・超過）</li>
+            <li>請求書ダッシュボード（作成・PDF・管理）</li>
+            <li>月次実績レポート（毎月1日自動送信）</li>
+            <li class="disabled">GVA案件の優先ご案内</li>
+            <li class="disabled">月1回オンライン相談（30分）</li>
+          </ul>
+          <a href="#cta" class="plan-btn plan-btn-primary">14日間無料で試す</a>
         </div>
-        <p style="text-align:center;margin-top:28px;font-size:13px;color:#aaa">クレジットカードは後から登録。14日間は完全無料で全機能お試しいただけます。</p>
+
+        <!-- PREMIUM -->
+        <div class="pricing-card">
+          <div class="plan-name">Premium</div>
+          <div class="plan-price">¥3,980<span>/月</span></div>
+          <div class="plan-cycle">年払いで2ヶ月分無料</div>
+          <div class="plan-divider"></div>
+          <ul class="plan-features">
+            <li>Proの全機能</li>
+            <li>GVA案件（協賛・タイアップ）の優先ご案内</li>
+            <li>月1回30分オンラインサポート相談</li>
+            <li>優先サポート対応</li>
+          </ul>
+          <a href="#cta" class="plan-btn plan-btn-secondary">14日間無料で試す</a>
+        </div>
       </div>
-      <script>
-      function showMonthly(){document.querySelectorAll('.monthly-price').forEach(function(e){e.style.display='';});document.querySelectorAll('.yearly-price').forEach(function(e){e.style.display='none';});document.getElementById('btn-monthly').style.cssText='padding:10px 28px;border-radius:100px;font-size:14px;font-weight:600;cursor:pointer;border:2px solid #06C755;background:#06C755;color:#fff';document.getElementById('btn-yearly').style.cssText='padding:10px 28px;border-radius:100px;font-size:14px;font-weight:600;cursor:pointer;border:2px solid #06C755;background:#fff;color:#06C755';}
-      function showYearly(){document.querySelectorAll('.monthly-price').forEach(function(e){e.style.display='none';});document.querySelectorAll('.yearly-price').forEach(function(e){e.style.display='';});document.getElementById('btn-yearly').style.cssText='padding:10px 28px;border-radius:100px;font-size:14px;font-weight:600;cursor:pointer;border:2px solid #06C755;background:#06C755;color:#fff';document.getElementById('btn-monthly').style.cssText='padding:10px 28px;border-radius:100px;font-size:14px;font-weight:600;cursor:pointer;border:2px solid #06C755;background:#fff;color:#06C755';}
-      </script>
-    </section>
+    </div>
+  </section>
 
   <!-- FINAL CTA -->
   <section class="cta-section" id="cta">
@@ -1063,7 +1095,7 @@
         セットアップは3分以内に完了します。
       </p>
       <div class="cta-actions">
-        <a href="https://line.me/R/ti/p/@102fuvbt" target="_blank" rel="noopener" target="_blank" class="btn-primary">
+        <a href="#" class="btn-primary">
           <svg class="line-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect width="24" height="24" rx="6" fill="#06C755"/>
             <path d="M12 5C7.58 5 4 8.13 4 12.02c0 2.62 1.65 4.92 4.12 6.24-.18.67-.49 1.73-.49 1.75 0 .05.02.1.06.14a.21.21 0 0 0 .15.05.2.2 0 0 0 .12-.04c.16-.11 2-.32 2.82-1.86A9.27 9.27 0 0 0 12 18.3c4.42 0 8-3.13 8-7.28S16.42 3.74 12 3.74z" fill="white"/>
