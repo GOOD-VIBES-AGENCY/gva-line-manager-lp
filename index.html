@@ -10,19 +10,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg-primary: #050a05;
-      --bg-secondary: #0a1a0a;
-      --bg-card: #0f1f0f;
-      --bg-card2: #101810;
-      --green-primary: #00e676;
-      --green-dark: #00c853;
-      --green-glow: rgba(0, 230, 118, 0.15);
-      --green-glow-strong: rgba(0, 230, 118, 0.3);
-      --text-primary: #f0f0f0;
-      --text-secondary: #a0a8a0;
-      --text-muted: #606860;
-      --border: rgba(0, 230, 118, 0.15);
-      --border-subtle: rgba(255, 255, 255, 0.06);
+      --bg-primary: #FFFFFF;
+      --bg-secondary: #F8F8F8;
+      --bg-card: #FFFFFF;
+      --green-primary: #06C755;
+      --green-dark: #05a847;
+      --green-glow: rgba(6, 199, 85, 0.08);
+      --text-primary: #111111;
+      --text-secondary: #555555;
+      --text-muted: #999999;
+      --border: rgba(6, 199, 85, 0.2);
+      --border-subtle: #EBEBEB;
     }
 
     * {
@@ -55,9 +53,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      background: rgba(5, 10, 5, 0.85);
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid var(--border-subtle);
+      background: #FFFFFF;
+      border-bottom: 1px solid #EEEEEE;
     }
 
     .nav-logo {
@@ -74,7 +71,7 @@
 
     .nav-cta {
       background: var(--green-primary);
-      color: #000;
+      color: #fff;
       border: none;
       padding: 10px 20px;
       border-radius: 100px;
@@ -87,7 +84,7 @@
     }
 
     .nav-cta:hover {
-      background: #fff;
+      background: var(--green-dark);
       transform: scale(1.03);
     }
 
@@ -102,6 +99,7 @@
       text-align: center;
       position: relative;
       overflow: hidden;
+      background: #FAFAFA;
     }
 
     .hero::before {
@@ -112,7 +110,7 @@
       transform: translateX(-50%);
       width: 700px;
       height: 700px;
-      background: radial-gradient(circle, rgba(0, 230, 118, 0.12) 0%, transparent 70%);
+      background: radial-gradient(circle, rgba(6, 199, 85, 0.07) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -120,7 +118,7 @@
       display: inline-flex;
       align-items: center;
       gap: 8px;
-      background: rgba(0, 230, 118, 0.08);
+      background: rgba(6, 199, 85, 0.08);
       border: 1px solid var(--border);
       border-radius: 100px;
       padding: 8px 16px;
@@ -149,6 +147,7 @@
       letter-spacing: -2px;
       margin-bottom: 24px;
       max-width: 800px;
+      color: var(--text-primary);
     }
 
     .hero h1 .highlight {
@@ -156,12 +155,12 @@
     }
 
     .hero-sub {
-      font-size: clamp(16px, 3vw, 20px);
+      font-size: clamp(16px, 3vw, 18px);
       color: var(--text-secondary);
       max-width: 560px;
       margin-bottom: 48px;
       font-weight: 400;
-      line-height: 1.8;
+      line-height: 1.9;
     }
 
     .hero-actions {
@@ -179,7 +178,7 @@
       justify-content: center;
       gap: 10px;
       background: var(--green-primary);
-      color: #000;
+      color: #fff;
       border: none;
       padding: 18px 32px;
       border-radius: 100px;
@@ -190,13 +189,13 @@
       transition: all 0.25s;
       width: 100%;
       font-family: 'Noto Sans JP', sans-serif;
-      box-shadow: 0 0 40px rgba(0, 230, 118, 0.3);
+      box-shadow: 0 4px 24px rgba(6, 199, 85, 0.25);
     }
 
     .btn-primary:hover {
-      background: #fff;
+      background: var(--green-dark);
       transform: translateY(-2px);
-      box-shadow: 0 0 60px rgba(0, 230, 118, 0.4);
+      box-shadow: 0 8px 32px rgba(6, 199, 85, 0.35);
     }
 
     .btn-primary .line-icon {
@@ -232,6 +231,7 @@
       border-top: 1px solid var(--border-subtle);
       border-bottom: 1px solid var(--border-subtle);
       flex-wrap: wrap;
+      background: var(--bg-primary);
     }
 
     .stat {
@@ -274,6 +274,7 @@
       letter-spacing: -1.5px;
       line-height: 1.2;
       margin-bottom: 24px;
+      color: var(--text-primary);
     }
 
     .section-desc {
@@ -292,22 +293,13 @@
     }
 
     .problem-card {
-      background: var(--bg-card);
-      border: 1px solid var(--border-subtle);
-      border-radius: 16px;
+      background: var(--bg-secondary);
+      border: 1px solid #E8E8E8;
+      border-radius: 20px;
       padding: 28px;
       position: relative;
       overflow: hidden;
-    }
-
-    .problem-card::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 2px;
-      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.08), transparent);
+      box-shadow: 0 2px 16px rgba(0,0,0,0.04);
     }
 
     .problem-emoji {
@@ -349,40 +341,26 @@
     }
 
     .feature-card {
-      background: var(--bg-primary);
-      border: 1px solid var(--border);
+      background: var(--bg-card);
+      border: 1px solid #E8E8E8;
       border-radius: 20px;
       padding: 32px;
       position: relative;
       transition: all 0.3s;
       overflow: hidden;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
     }
 
     .feature-card:hover {
-      border-color: rgba(0, 230, 118, 0.4);
+      border-color: rgba(6, 199, 85, 0.3);
       transform: translateY(-4px);
-      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4), 0 0 40px var(--green-glow);
-    }
-
-    .feature-card::after {
-      content: '';
-      position: absolute;
-      inset: 0;
-      border-radius: 20px;
-      background: radial-gradient(ellipse at top left, var(--green-glow) 0%, transparent 60%);
-      opacity: 0;
-      transition: opacity 0.3s;
-      pointer-events: none;
-    }
-
-    .feature-card:hover::after {
-      opacity: 1;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08), 0 0 0 1px rgba(6,199,85,0.3);
     }
 
     .feature-icon {
       width: 52px;
       height: 52px;
-      background: rgba(0, 230, 118, 0.1);
+      background: rgba(6, 199, 85, 0.08);
       border-radius: 14px;
       display: flex;
       align-items: center;
@@ -393,10 +371,11 @@
     }
 
     .feature-title {
-      font-size: 18px;
+      font-size: 17px;
       font-weight: 700;
       margin-bottom: 12px;
       letter-spacing: -0.3px;
+      color: var(--text-primary);
     }
 
     .feature-desc {
@@ -413,9 +392,9 @@
     }
 
     .feature-tag {
-      background: rgba(0, 230, 118, 0.08);
+      background: rgba(6, 199, 85, 0.07);
       border: 1px solid var(--border);
-      color: var(--green-primary);
+      color: var(--green-dark);
       padding: 4px 12px;
       border-radius: 100px;
       font-size: 11px;
@@ -446,7 +425,7 @@
       top: 0;
       bottom: 0;
       width: 1px;
-      background: var(--border);
+      background: var(--border-subtle);
     }
 
     .step {
@@ -464,8 +443,8 @@
     .step-num {
       width: 56px;
       height: 56px;
-      background: var(--bg-card);
-      border: 1px solid var(--border);
+      background: var(--bg-primary);
+      border: 2px solid var(--border);
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -477,6 +456,7 @@
       flex-shrink: 0;
       position: relative;
       z-index: 1;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     }
 
     .step-content {
@@ -488,6 +468,7 @@
       font-weight: 700;
       margin-bottom: 8px;
       letter-spacing: -0.3px;
+      color: var(--text-primary);
     }
 
     .step-desc {
@@ -518,25 +499,27 @@
 
     .pricing-card {
       background: var(--bg-primary);
-      border: 1px solid var(--border-subtle);
+      border: 1px solid #E8E8E8;
       border-radius: 24px;
       padding: 36px;
       display: flex;
       flex-direction: column;
       transition: all 0.3s;
       position: relative;
+      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
     }
 
     .pricing-card.featured {
-      background: linear-gradient(160deg, #0a2a12, #051005);
+      background: linear-gradient(160deg, #f0fbf4, #ffffff);
       border-color: var(--green-primary);
       transform: scale(1.02);
-      box-shadow: 0 0 80px rgba(0, 230, 118, 0.2);
+      box-shadow: 0 8px 40px rgba(6, 199, 85, 0.15);
     }
 
     .pricing-card:not(.featured):hover {
-      border-color: var(--border);
+      border-color: rgba(6, 199, 85, 0.3);
       transform: translateY(-4px);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.08);
     }
 
     .featured-badge {
@@ -545,7 +528,7 @@
       left: 50%;
       transform: translateX(-50%);
       background: var(--green-primary);
-      color: #000;
+      color: #fff;
       font-size: 11px;
       font-weight: 800;
       padding: 6px 16px;
@@ -570,6 +553,7 @@
       font-family: 'Inter', sans-serif;
       line-height: 1;
       margin-bottom: 6px;
+      color: var(--text-primary);
     }
 
     .plan-price span {
@@ -622,8 +606,8 @@
     }
 
     .plan-features li.disabled::before {
-      content: '–';
-      color: var(--text-muted);
+      content: '✗';
+      color: #CCCCCC;
     }
 
     .plan-btn {
@@ -640,21 +624,22 @@
 
     .plan-btn-primary {
       background: var(--green-primary);
-      color: #000;
+      color: #fff;
+      box-shadow: 0 4px 16px rgba(6, 199, 85, 0.3);
     }
 
     .plan-btn-primary:hover {
-      background: #fff;
+      background: var(--green-dark);
     }
 
     .plan-btn-secondary {
-      background: rgba(255, 255, 255, 0.05);
+      background: var(--bg-secondary);
       color: var(--text-secondary);
-      border: 1px solid var(--border-subtle);
+      border: 1px solid #E8E8E8;
     }
 
     .plan-btn-secondary:hover {
-      background: rgba(255, 255, 255, 0.1);
+      background: #EEEEEE;
       color: var(--text-primary);
     }
 
@@ -664,17 +649,18 @@
       text-align: center;
       position: relative;
       overflow: hidden;
+      background: var(--bg-primary);
     }
 
     .cta-section::before {
       content: '';
       position: absolute;
-      bottom: -100px;
+      top: 50%;
       left: 50%;
-      transform: translateX(-50%);
-      width: 600px;
-      height: 600px;
-      background: radial-gradient(circle, rgba(0, 230, 118, 0.1) 0%, transparent 70%);
+      transform: translate(-50%, -50%);
+      width: 700px;
+      height: 700px;
+      background: radial-gradient(circle, rgba(6, 199, 85, 0.06) 0%, transparent 70%);
       pointer-events: none;
     }
 
@@ -685,11 +671,16 @@
     }
 
     .cta-title {
-      font-size: clamp(30px, 6vw, 56px);
+      font-size: clamp(30px, 6vw, 52px);
       font-weight: 900;
       letter-spacing: -2px;
-      line-height: 1.1;
+      line-height: 1.15;
       margin-bottom: 20px;
+      color: var(--text-primary);
+    }
+
+    .cta-title .highlight {
+      color: var(--green-primary);
     }
 
     .cta-desc {
@@ -713,6 +704,7 @@
       border-top: 1px solid var(--border-subtle);
       padding: 32px 24px;
       text-align: center;
+      background: var(--bg-primary);
     }
 
     .footer-logo {
@@ -730,6 +722,11 @@
 
     .footer-sub a {
       color: inherit;
+      text-decoration: none;
+    }
+
+    .footer-sub a:hover {
+      color: var(--text-secondary);
     }
 
     /* RESPONSIVE */
@@ -760,7 +757,7 @@
     .hero-actions { animation: fadeInUp 0.6s ease both 0.3s; }
 
     .line-gradient {
-      background: linear-gradient(135deg, #06C755 0%, #00e676 100%);
+      background: linear-gradient(135deg, #06C755 0%, #05d660 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -779,14 +776,14 @@
   <section class="hero">
     <div class="hero-badge">AIマネージャー β版 先行受付中</div>
     <h1>
-      インフルエンサーの<br>
-      案件管理、<span class="highlight">もう</span><br>
-      <span class="highlight">自分でやらなくていい。</span>
+      仕事の管理、<br>
+      全部LINEに<br>
+      <span class="highlight">任せよう。</span>
     </h1>
     <p class="hero-sub">
-      今日から、案件管理は任せよう。<br>
-      「高橋 徹 | GVA」をLINEで追加するだけ。<br>
-      オファー受付から請求書発行まで、インフルエンサーの仕事をまるごと自動化。
+      オファーが来たら通知。期限が近づいたらリマインド。<br>
+      請求書もLINEからワンタップ。<br>
+      インフルエンサーの面倒な管理業務を、まるごと自動化。
     </p>
     <div class="hero-actions">
       <a href="#cta" class="btn-primary">
@@ -804,19 +801,19 @@
   <!-- SOCIAL PROOF -->
   <div class="social-proof">
     <div class="stat">
-      <div class="stat-num">10フェーズ</div>
-      <div class="stat-label">案件フェーズ管理</div>
+      <div class="stat-num">10</div>
+      <div class="stat-label">案件フェーズを自動管理</div>
     </div>
     <div class="stat">
-      <div class="stat-num">4段階</div>
-      <div class="stat-label">自動リマインド通知</div>
+      <div class="stat-num">4回</div>
+      <div class="stat-label">期限前に自動リマインド</div>
     </div>
     <div class="stat">
-      <div class="stat-num">0円</div>
-      <div class="stat-label">導入費用・初期費用</div>
+      <div class="stat-num">¥0</div>
+      <div class="stat-label">導入費・初期費用</div>
     </div>
     <div class="stat">
-      <div class="stat-num">24/7</div>
+      <div class="stat-num">24h</div>
       <div class="stat-label">AIが常時稼働</div>
     </div>
   </div>
@@ -824,41 +821,31 @@
   <!-- PROBLEM SECTION -->
   <div class="section">
     <p class="section-label">よくある悩み</p>
-    <h2 class="section-title">こんな経験、ありませんか？</h2>
+    <h2 class="section-title">こんな悩み、ありませんか？</h2>
     <p class="section-desc">
       インフルエンサーの案件管理は想像以上に手間がかかる。<br>
       本来の創作活動に集中できていますか？
     </p>
     <div class="problems-grid">
       <div class="problem-card">
-        <span class="problem-emoji">😰</span>
-        <div class="problem-title">投稿期限を忘れた…</div>
-        <div class="problem-desc">複数案件が重なると、どの案件がいつ締め切りかわからなくなってしまう。</div>
+        <span class="problem-emoji">😩</span>
+        <div class="problem-title">「オファーを見逃した」</div>
+        <div class="problem-desc">LINEの通知が多すぎて気づいたら期限切れ。</div>
       </div>
       <div class="problem-card">
-        <span class="problem-emoji">📊</span>
-        <div class="problem-title">収支がぐちゃぐちゃ</div>
-        <div class="problem-desc">請求書をエクセルで管理していたけど、毎月送り忘れてる案件が出てくる。</div>
-      </div>
-      <div class="problem-card">
-        <span class="problem-emoji">📱</span>
-        <div class="problem-title">LINEのやり取りが大変</div>
-        <div class="problem-desc">オファー・条件確認・日程調整のやり取りがバラバラで、どこまで進んだか忘れてしまう。</div>
+        <span class="problem-emoji">📅</span>
+        <div class="problem-title">「締め切りをうっかり忘れた」</div>
+        <div class="problem-desc">複数案件を頭の中だけで管理するのは限界。</div>
       </div>
       <div class="problem-card">
         <span class="problem-emoji">🧾</span>
-        <div class="problem-title">請求書の発行が面倒</div>
-        <div class="problem-desc">毎回フォーマットを探して、金額入れて、PDFにして送る…を繰り返している。</div>
+        <div class="problem-title">「請求書を作るのが面倒」</div>
+        <div class="problem-desc">毎回エクセルや手書きで時間がかかる。</div>
       </div>
       <div class="problem-card">
-        <span class="problem-emoji">🤯</span>
-        <div class="problem-title">マネージャーを雇う余裕はない</div>
-        <div class="problem-desc">個人で活動しているので、事務作業をお願いできる人がいない。でも一人では限界がある。</div>
-      </div>
-      <div class="problem-card">
-        <span class="problem-emoji">⏰</span>
-        <div class="problem-title">事務作業に時間を取られすぎ</div>
-        <div class="problem-desc">コンテンツ制作より事務作業に費やす時間のほうが長くなってきた気がする。</div>
+        <span class="problem-emoji">📊</span>
+        <div class="problem-title">「先月いくら稼いだかわからない」</div>
+        <div class="problem-desc">収支をまとめる時間も気力もない。</div>
       </div>
     </div>
   </div>
@@ -867,64 +854,64 @@
   <section class="features-section">
     <div class="features-inner">
       <p class="section-label">機能</p>
-      <h2 class="section-title">LINEが、あなたの<br><span class="line-gradient">AIマネージャー</span>になる</h2>
+      <h2 class="section-title">GVA Manager Botができること</h2>
       <p class="section-desc">
-        使い慣れたLINEで全部完結。新しいアプリを覚える必要はゼロです。
+        LINEに追加するだけで、これだけのことを自動でやってくれます。
       </p>
       <div class="features-grid">
         <div class="feature-card">
           <div class="feature-icon">🤖</div>
-          <div class="feature-title">グループLINEをAIが常時監視</div>
+          <div class="feature-title">グループをAIが監視</div>
           <div class="feature-desc">
-            クライアントとのグループLINEにBotを追加するだけ。クライアントの発言をAIがリアルタイム解析し、承認・修正依頼・期限変更などの重要な動きを1対1チャットに即通知。見落としゼロ。
+            クライアントとのLINEグループに追加するだけ。承認・修正・期限変更を自動検出して1対1で通知。
           </div>
           <div class="feature-tags">
             <span class="feature-tag">AI解析</span>
             <span class="feature-tag">リアルタイム通知</span>
-            <span class="feature-tag">自動検出</span>
+            <span class="feature-tag">見落ちゼロ</span>
           </div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">📄</div>
-          <div class="feature-title">オリエンシートを送るだけで案件登録</div>
+          <div class="feature-title">オリエン書類を自動登録</div>
           <div class="feature-desc">
-            グループLINEにオリエンシート（画像・PDF）が流れてきたら自動で内容を読み取り。案件名・報酬・期限・投稿条件を抽出して「この内容で登録しますか？」と確認するので、手入力不要。
+            グループに流れてきた書類を読み取り、案件を自動登録。コピペ・手入力は一切不要。
           </div>
           <div class="feature-tags">
-            <span class="feature-tag">画像解析</span>
-            <span class="feature-tag">自動抽出</span>
-            <span class="feature-tag">手入力ゼロ</span>
+            <span class="feature-tag">書類読取</span>
+            <span class="feature-tag">自動登録</span>
+            <span class="feature-tag">手入力不要</span>
           </div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">📩</div>
-          <div class="feature-title">オファーをLINEで一元管理</div>
+          <div class="feature-title">オファーを見逃さない</div>
           <div class="feature-desc">
-            「オファー」ボタンで検討中の案件を一覧表示。番号を選んで「エントリー」「見送り」「受注確定」を送るだけ。条件交渉中・保留中もフェーズで管理できる。
+            届いたオファーをまとめて確認。「エントリー」「見送り」「受注確定」がLINEで完結。
           </div>
           <div class="feature-tags">
-            <span class="feature-tag">オファー一覧</span>
-            <span class="feature-tag">エントリー管理</span>
+            <span class="feature-tag">オファー管理</span>
+            <span class="feature-tag">エントリー</span>
             <span class="feature-tag">受注確定</span>
           </div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">📂</div>
-          <div class="feature-title">案件を10フェーズで自動管理</div>
+          <div class="feature-title">案件の進捗を自動管理</div>
           <div class="feature-desc">
-            オリエン待ち→構成案→初稿→修正→投稿準備→投稿済み→URL報告→請求書発行→入金確認まで、フェーズを「次へ進める」で更新するだけ。いつどこまで進んでいるかが一目瞭然。
+            初稿・修正・投稿・請求まで10ステップで追跡。「次へ」を押すだけで進む。
           </div>
           <div class="feature-tags">
             <span class="feature-tag">10フェーズ</span>
-            <span class="feature-tag">進捗管理</span>
+            <span class="feature-tag">進捗可視化</span>
             <span class="feature-tag">自動追跡</span>
           </div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">⏰</div>
-          <div class="feature-title">期限を4段階で自動通知</div>
+          <div class="feature-title">締め切りを自動リマインド</div>
           <div class="feature-desc">
-            各案件フェーズの期限を3日前・前日・当日朝・期限超過の4タイミングで自動通知。複数案件が重なっても抜け漏れなし。「今日」ボタンで今日・明日の期限タスクを即確認できる。
+            3日前・前日・当日・超過をLINEで通知。うっかり忘れがなくなる。
           </div>
           <div class="feature-tags">
             <span class="feature-tag">3日前</span>
@@ -935,12 +922,11 @@
         </div>
         <div class="feature-card">
           <div class="feature-icon">🧾</div>
-          <div class="feature-title">請求書の作成・管理がスマホで完結</div>
+          <div class="feature-title">請求書をスマホで作れる</div>
           <div class="feature-desc">
-            「請求書」ボタンでWebダッシュボードのURLを案内。LINEでログインするだけでアクセス可能。請求書の新規作成・編集・PDF保存・ステータス管理（下書き・送付済み・入金済み）が全てスマホから完結。
+            LINEでログインして請求書を作成・送付・管理。PDF出力もワンタップ。
           </div>
           <div class="feature-tags">
-            <span class="feature-tag">Web管理</span>
             <span class="feature-tag">PDF出力</span>
             <span class="feature-tag">LINE認証</span>
             <span class="feature-tag">入金管理</span>
@@ -948,26 +934,26 @@
         </div>
         <div class="feature-card">
           <div class="feature-icon">📊</div>
-          <div class="feature-title">毎月1日に前月実績を自動レポート</div>
+          <div class="feature-title">先月の収入を自動レポート</div>
           <div class="feature-desc">
-            毎月1日の朝、前月の案件数・完了数・合計報酬額をまとめたレポートが自動でLINEに届く。手動集計一切不要。確定申告や収支管理の参考資料としても使える。
+            毎月1日に前月分の案件数・報酬額をLINEに送信。集計作業ゼロ。
           </div>
           <div class="feature-tags">
             <span class="feature-tag">自動集計</span>
-            <span class="feature-tag">前月実績</span>
-            <span class="feature-tag">毎月1日</span>
+            <span class="feature-tag">毎月レポート</span>
+            <span class="feature-tag">確定申告対応</span>
           </div>
         </div>
         <div class="feature-card">
           <div class="feature-icon">⚙️</div>
-          <div class="feature-title">設定は最初の1回だけ</div>
+          <div class="feature-title">最初の設定だけでOK</div>
           <div class="feature-desc">
-            氏名・住所・銀行口座を「設定」コマンドで登録しておくだけで、以後の請求書に自動反映。案件グループにBotを招待したら、あとは普段通りLINEを使うだけで全自動で動き続ける。
+            口座情報を1回登録すれば、あとは全自動。アプリインストール不要。
           </div>
           <div class="feature-tags">
             <span class="feature-tag">初回のみ</span>
-            <span class="feature-tag">自動反映</span>
-            <span class="feature-tag">完全放置OK</span>
+            <span class="feature-tag">アプリ不要</span>
+            <span class="feature-tag">完全自動</span>
           </div>
         </div>
       </div>
@@ -978,7 +964,7 @@
   <section>
     <div class="how-section">
       <p class="section-label">使い方</p>
-      <h2 class="section-title">4ステップで始められる</h2>
+      <h2 class="section-title">はじめかた、たったの4ステップ</h2>
       <p class="section-desc" style="margin: 0 auto 0;">
         難しい設定は一切なし。LINEさえあれば今すぐ使えます。
       </p>
@@ -987,29 +973,29 @@
         <div class="step">
           <div class="step-num">1</div>
           <div class="step-content">
-            <div class="step-title">LINEを友達追加（1分）</div>
-            <div class="step-desc">「高橋 徹 | GVA」のLINE公式アカウントを友達追加。インストール不要・アプリ不要。</div>
+            <div class="step-title">友達追加（1分）</div>
+            <div class="step-desc">LINEで「高橋 徹 | GVA」を検索して追加。それだけ。</div>
           </div>
         </div>
         <div class="step">
           <div class="step-num">2</div>
           <div class="step-content">
-            <div class="step-title">初期設定を送信（3分）</div>
-            <div class="step-desc">「設定」と送ると登録フォーマットが届く。氏名・住所・銀行口座を1回入力するだけで請求書に自動反映される。</div>
+            <div class="step-title">初期設定（3分）</div>
+            <div class="step-desc">「設定」と送ると案内が届く。口座情報を入力すれば請求書に自動反映。</div>
           </div>
         </div>
         <div class="step">
           <div class="step-num">3</div>
           <div class="step-content">
-            <div class="step-title">クライアントグループにBotを招待</div>
-            <div class="step-desc">既存のクライアントとのグループLINEに追加するだけ。以後、クライアントのやり取りをAIが自動監視・通知してくれる。</div>
+            <div class="step-title">グループにBotを追加</div>
+            <div class="step-desc">クライアントとのLINEグループにBotを招待。以後、AIが自動で監視を始める。</div>
           </div>
         </div>
         <div class="step">
           <div class="step-num">4</div>
           <div class="step-content">
-            <div class="step-title">あとは普段通りLINEを使うだけ</div>
-            <div class="step-desc">メニューボタンを押すか、話しかけるだけ。期限リマインドも請求書も月次レポートも、全部Botが勝手にやってくれる。</div>
+            <div class="step-title">あとはLINEを使うだけ</div>
+            <div class="step-desc">メニューを押すか話しかけるだけ。全部自動でやってくれる。</div>
           </div>
         </div>
       </div>
@@ -1020,7 +1006,7 @@
   <section class="pricing-section" id="pricing">
     <div class="pricing-inner">
       <p class="section-label">料金プラン</p>
-      <h2 class="section-title">まずは無料で試してみて</h2>
+      <h2 class="section-title">シンプルな料金プラン</h2>
       <p class="section-desc">
         クレジットカードなし。必要になったらアップグレードすればOK。
       </p>
@@ -1035,9 +1021,9 @@
           <ul class="plan-features">
             <li>案件管理（3件まで）</li>
             <li>今日・今週のタスク確認</li>
-            <li>オファー管理（受付・見送り）</li>
+            <li>オファー管理</li>
             <li>LINEメニュー操作</li>
-            <li class="disabled">AI自動解析・自動登録</li>
+            <li class="disabled">AI自動解析</li>
             <li class="disabled">自動リマインド</li>
             <li class="disabled">請求書ダッシュボード</li>
             <li class="disabled">月次レポート</li>
@@ -1047,7 +1033,7 @@
 
         <!-- PRO (FEATURED) -->
         <div class="pricing-card featured">
-          <div class="featured-badge">🔥 一番人気</div>
+          <div class="featured-badge">⭐ おすすめ</div>
           <div class="plan-name">Pro</div>
           <div class="plan-price">¥1,980<span>/月</span></div>
           <div class="plan-cycle">年払いで2ヶ月分無料</div>
@@ -1055,12 +1041,12 @@
           <ul class="plan-features">
             <li>案件管理（無制限）</li>
             <li>グループLINEのAI自動監視</li>
-            <li>オリエンシートの自動読み取り・案件登録</li>
-            <li>投稿期限リマインド（3日前・前日・当日・超過）</li>
-            <li>請求書ダッシュボード（作成・PDF・管理）</li>
-            <li>月次実績レポート（毎月1日自動送信）</li>
-            <li class="disabled">GVA案件の優先ご案内</li>
-            <li class="disabled">月1回オンライン相談（30分）</li>
+            <li>オリエン書類の自動読み取り・登録</li>
+            <li>自動リマインド（4段階）</li>
+            <li>請求書作成・PDF・管理</li>
+            <li>毎月の収入レポート</li>
+            <li class="disabled">GVA案件の優先案内</li>
+            <li class="disabled">月1回オンライン相談</li>
           </ul>
           <a href="#cta" class="plan-btn plan-btn-primary">14日間無料で試す</a>
         </div>
@@ -1072,9 +1058,9 @@
           <div class="plan-cycle">年払いで2ヶ月分無料</div>
           <div class="plan-divider"></div>
           <ul class="plan-features">
-            <li>Proの全機能</li>
-            <li>GVA案件（協賛・タイアップ）の優先ご案内</li>
-            <li>月1回30分オンラインサポート相談</li>
+            <li>Proのすべての機能</li>
+            <li>GVAからの案件を優先案内</li>
+            <li>月1回30分オンラインサポート</li>
             <li>優先サポート対応</li>
           </ul>
           <a href="#cta" class="plan-btn plan-btn-secondary">14日間無料で試す</a>
@@ -1087,12 +1073,11 @@
   <section class="cta-section" id="cta">
     <div class="cta-inner">
       <h2 class="cta-title">
-        今日から、案件管理を<br>
-        <span class="line-gradient">AIに任せよう。</span>
+        今すぐはじめよう、<br>
+        <span class="highlight">無料で。</span>
       </h2>
       <p class="cta-desc">
-        クレジットカード不要。永久無料プランで今すぐ始められます。<br>
-        セットアップは3分以内に完了します。
+        まずは無料で試せます。クレジットカード不要、30秒で始まる。
       </p>
       <div class="cta-actions">
         <a href="#" class="btn-primary">
