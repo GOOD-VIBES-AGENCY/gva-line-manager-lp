@@ -115,6 +115,26 @@ nav{position:sticky;top:0;z-index:99;background:rgba(255,255,255,.95);backdrop-f
 .dim{color:#bbb}
 .pc-pro .dim{color:rgba(255,255,255,.4)}
 
+/* Pricing 3col */
+.pricing3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:0}
+.pc3{border-radius:16px;padding:16px 12px;border:1.5px solid #eee;background:#fff}
+.pc3-free{}
+.pc3-pro{background:#06C755;color:#fff;border-color:#06C755;box-shadow:0 8px 28px rgba(6,199,85,.35);position:relative}
+@keyframes pro3-sway{0%,100%{transform:translateY(0)}50%{transform:translateY(-5px)}}
+.pc3-pro{animation:pro3-sway 4s ease-in-out infinite}
+.pc3-premium{background:#111;color:#fff;border-color:#111}
+.pc3-badge{display:inline-block;background:#fff;color:#06C755;font-size:10px;font-weight:700;padding:2px 8px;border-radius:100px;margin-bottom:6px}
+.pc3-badge-g{background:linear-gradient(135deg,#FFD700,#FFA500);color:#fff}
+.pc3-name{font-size:22px;font-weight:900;margin-bottom:2px}
+.pc3-free .pc3-name{color:#bbb}
+.pc3-price{font-size:18px;font-weight:900;margin-bottom:2px}
+.pc3-trial{font-size:10px;opacity:.8;margin-bottom:10px}
+.pc3-list{list-style:none;font-size:11px;line-height:1.6}
+.pc3-list li{padding:3px 0;border-bottom:1px solid rgba(0,0,0,.06)}
+.pc3-pro .pc3-list li{border-bottom-color:rgba(255,255,255,.15)}
+.pc3-premium .pc3-list li{border-bottom-color:rgba(255,255,255,.1)}
+.pc3-list li:last-child{border:none}
+.dim3{color:#bbb}
 /* FAQ */
 .faq-item{border-bottom:1px solid #eee}
 .faq-q{width:100%;text-align:left;background:none;border:none;padding:18px 0;font-size:15px;font-weight:700;color:#111;cursor:pointer;display:flex;justify-content:space-between;align-items:center;font-family:inherit}
@@ -425,23 +445,45 @@ footer{background:#111;color:#555;text-align:center;padding:20px;font-size:12px}
   <div class="w">
     <h2 style="font-size:22px;font-weight:900;line-height:1.4;margin-bottom:8px" class="fi">料金は？💰</h2>
     <p style="font-size:14px;color:#666;margin-bottom:24px" class="fi">まずは無料で使えます</p>
-    <div class="pricing fi">
-      <div class="pc pc-free">
-        <div class="pc-name">FREE</div>
-        <div class="pc-price">¥0 / 永久無料</div>
-        <ul class="pc-list" style="margin-top:14px">
-          <li>✅ 1グループ監視</li><li>✅ オファー管理</li><li>✅ 今日のタスク</li>
-          <li class="dim">— 自動リマインド</li><li class="dim">— 請求書</li><li class="dim">— 毎月レポート</li>
+    <div class="pricing3 fi">
+      <div class="pc3 pc3-free">
+        <div class="pc3-name">FREE</div>
+        <div class="pc3-price">¥0<span style="font-size:11px;font-weight:400">/永久無料</span></div>
+        <ul class="pc3-list">
+          <li>✅ 案件ダッシュボード</li>
+          <li>✅ 1グループ監視</li>
+          <li>✅ オファー管理</li>
+          <li>✅ 今日のタスク</li>
+          <li class="dim3">— AI自動入力</li>
+          <li class="dim3">— 自動リマインド</li>
+          <li class="dim3">— 請求書</li>
+          <li class="dim3">— 毎月レポート</li>
         </ul>
       </div>
-      <div class="pc pc-pro">
-        <span class="pc-badge">⭐ おすすめ</span>
-        <div class="pc-name">PRO</div>
-        <div class="pc-price">¥1,980/月</div>
-        <div class="pc-trial">🎁 14日間無料で試せる</div>
-        <ul class="pc-list">
-          <li>✅ グループ無制限</li><li>✅ 自動リマインド</li><li>✅ 請求書</li>
-          <li>✅ 毎月レポート</li><li>✅ 全部使い放題</li>
+      <div class="pc3 pc3-pro">
+        <span class="pc3-badge">⭐ おすすめ</span>
+        <div class="pc3-name">PRO</div>
+        <div class="pc3-price">¥1,980<span style="font-size:11px;opacity:.8">/月</span></div>
+        <div class="pc3-trial">🎁 14日間無料</div>
+        <ul class="pc3-list">
+          <li>✅ 全機能解除</li>
+          <li>✅ グループ無制限</li>
+          <li>✅ AI自動入力</li>
+          <li>✅ カレンダー＆ガント</li>
+          <li>✅ 自動リマインド</li>
+          <li>✅ 請求書</li>
+          <li>✅ 毎月レポート</li>
+        </ul>
+      </div>
+      <div class="pc3 pc3-premium">
+        <span class="pc3-badge pc3-badge-g">💎 VIP</span>
+        <div class="pc3-name">PREMIUM</div>
+        <div class="pc3-price">¥5,980<span style="font-size:11px;opacity:.8">/月</span></div>
+        <div class="pc3-trial">🎁 14日間無料</div>
+        <ul class="pc3-list">
+          <li>✅ PROの全機能</li>
+          <li>✅ GVA案件優先ご案内</li>
+          <li>✅ 月1回30分<br>　オンラインサポート</li>
         </ul>
       </div>
     </div>
@@ -454,7 +496,7 @@ footer{background:#111;color:#555;text-align:center;padding:20px;font-size:12px}
     <h2 style="font-size:22px;font-weight:900;line-height:1.4;margin-bottom:28px" class="fi">よくある質問 ❓</h2>
     <div class="faq-item fi">
       <button class="faq-q" onclick="toggleFaq(this)">無料でどこまで使えますか？</button>
-      <div class="faq-a">1クライアントのグループ監視・オファー管理・今日のタスク確認が永久無料で使えます。自動リマインド・請求書はPro（¥1,980/月）以上の機能です。</div>
+      <div class="faq-a">案件ダッシュボード・1グループ監視・オファー管理・今日のタスク確認が永久無料。AI自動入力・自動リマインド・請求書・カレンダー・ガントはPro（¥1,980/月）以上で使えます。</div>
     </div>
     <div class="faq-item fi">
       <button class="faq-q" onclick="toggleFaq(this)">LINEじゃないとダメですか？</button>
@@ -479,6 +521,10 @@ footer{background:#111;color:#555;text-align:center;padding:20px;font-size:12px}
     <div class="faq-item fi">
       <button class="faq-q" onclick="toggleFaq(this)">AI自動入力ってどうやって使うの？</button>
       <div class="faq-a">クライアントから届いたLINEメッセージをBotに転送するだけ。AIが案件名・報酬金額・投稿日程などを自動で読み取ってダッシュボードに登録します。手入力は不要です。</div>
+    </div>
+    <div class="faq-item fi">
+      <button class="faq-q" onclick="toggleFaq(this)">Premiumプランはありますか？</button>
+      <div class="faq-a">Yes♥ Premiumプラン（¥5,980/月）もあります。Proの全機能に加えて、「GVA案件の優先ご案内」と「月1回30分オンラインサポート」がつきます。GVAが属するインフルエンサー向けのプランです。アップグレードを選んで確認できます。</div>
     </div>
   </div>
 </section>
