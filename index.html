@@ -123,6 +123,12 @@ nav{position:sticky;top:0;z-index:99;background:rgba(255,255,255,.95);backdrop-f
 .faq-a{display:none;font-size:14px;color:#555;line-height:1.8;padding-bottom:16px}
 .faq-a.open{display:block}
 
+/* Dashboard feature cards */
+.dash-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.dash-card{background:#fff;border:1px solid #eee;border-radius:16px;padding:16px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.dash-icon{font-size:28px;margin-bottom:8px}
+.dash-card-title{font-size:14px;font-weight:900;margin-bottom:6px}
+.dash-card-body{font-size:12px;color:#666;line-height:1.7}
 /* CTA */
 .cta-logo{margin:0 auto 24px;filter:invert(1);max-width:120px}
 .cta-title{font-size:34px;font-weight:900;line-height:1.2;margin-bottom:16px;text-align:center}
@@ -245,6 +251,7 @@ footer{background:#111;color:#555;text-align:center;padding:20px;font-size:12px}
     <div class="card-deck">
     <div class="card fi"><div class="card-emoji">😩</div><div class="card-title">「DM、多すぎて見てない」</div><div class="card-body">クライアントからのオファーが普通のDMに埋もれてそのまま…。気づいたら期限が切れてた、なんてことも。</div></div>
     <div class="card fi"><div class="card-emoji">🤯</div><div class="card-title">「今日締め切りだったの？！」</div><div class="card-body">3本同時進行してると、スケジュールが追いつかない。頭の中だけで覚えようとして失敗するやつ。</div></div>
+    <div class="card fi"><div class="card-emoji">📋</div><div class="card-title">「案件の全体像、把握できない」</div><div class="card-body">構成案・初稿・修正稿・投稿日・入金日…。どこまで進んでるかひと目でわからない。どこかで絶対抜ける。</div></div>
     <div class="card fi"><div class="card-emoji">😅</div><div class="card-title">「請求書の書き方、わからん」</div><div class="card-body">毎回ゼロから調べて、金額合ってるか不安で、送るまでに1時間。これが毎月続く。</div></div>
     <div class="card fi"><div class="card-emoji">💸</div><div class="card-title">「先月、いくら稼いだっけ？」</div><div class="card-body">案件ごとに金額バラバラで把握できてない。確定申告になったとき絶対しんどい。</div></div>
     </div>
@@ -260,13 +267,58 @@ footer{background:#111;color:#555;text-align:center;padding:20px;font-size:12px}
     <h2 style="font-size:22px;font-weight:900;line-height:1.4;margin-bottom:28px" class="fi">追加するだけで、<br>こう変わる ✨</h2>
     <div class="ba fi"><div class="ba-b"><div class="ba-lbl">BEFORE 😩</div><div class="ba-txt">オファーを見逃す</div></div><div class="ba-arr">✦ GVA Bot で変わる ✦</div><div class="ba-a"><div class="ba-lbl">AFTER ✅</div><div class="ba-txt">📩 届いたら即通知。見逃しゼロ</div></div></div>
     <div class="ba fi"><div class="ba-b"><div class="ba-lbl">BEFORE 🤯</div><div class="ba-txt">締め切りを忘れる</div></div><div class="ba-arr">✦ GVA Bot で変わる ✦</div><div class="ba-a"><div class="ba-lbl">AFTER ✅</div><div class="ba-txt">⏰ 3日前・前日・当日に勝手に教えてくれる</div></div></div>
+    <div class="ba fi"><div class="ba-b"><div class="ba-lbl">BEFORE 📋</div><div class="ba-txt">案件の進捗がバラバラで不安</div></div><div class="ba-arr">✦ GVA Bot で変わる ✦</div><div class="ba-a"><div class="ba-lbl">AFTER ✅</div><div class="ba-txt">🗓️ カレンダー＆ガントで全案件を一目管理</div></div></div>
+    <div class="ba fi"><div class="ba-b"><div class="ba-lbl">BEFORE 📝</div><div class="ba-txt">LINEから案件情報を手入力</div></div><div class="ba-arr">✦ GVA Bot で変わる ✦</div><div class="ba-a"><div class="ba-lbl">AFTER ✅</div><div class="ba-txt">🤖 AIが自動解析。LINEを転送するだけで登録完了</div></div></div>
     <div class="ba fi"><div class="ba-b"><div class="ba-lbl">BEFORE 😅</div><div class="ba-txt">請求書が作れない</div></div><div class="ba-arr">✦ GVA Bot で変わる ✦</div><div class="ba-a"><div class="ba-lbl">AFTER ✅</div><div class="ba-txt">🧾 スマホで3分。PDF送付まで完結</div></div></div>
     <div class="ba fi"><div class="ba-b"><div class="ba-lbl">BEFORE 💸</div><div class="ba-txt">収入が把握できない</div></div><div class="ba-arr">✦ GVA Bot で変わる ✦</div><div class="ba-a"><div class="ba-lbl">AFTER ✅</div><div class="ba-txt">📊 毎月1日に先月分のレポートが届く</div></div></div>
   </div>
 </section>
 
 <!-- WAVE -->
-<div class="wave"><svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width:100%;height:40px"><path d="M0 30 C360 60 1080 0 1440 30 L1440 60 L0 60 Z" fill="#F0FBF4"/></svg></div>
+<div class="wave"><svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width:100%;height:40px"><path d="M0 30 C360 60 1080 0 1440 30 L1440 60 L0 60 Z" fill="#fff"/></svg></div>
+
+<!-- DASHBOARD FEATURE -->
+<section class="sec">
+  <div class="w">
+    <h2 style="font-size:22px;font-weight:900;line-height:1.4;margin-bottom:8px" class="fi">📱 管理画面つき。<br>案件の「今」が全部見える</h2>
+    <p style="font-size:14px;color:#555;line-height:1.8;margin-bottom:24px" class="fi">LINEに追加するだけで、スマホ専用の案件ダッシュボードが使えるようになります。アプリ不要、スマホのブラウザだけでOK。</p>
+    <div class="dash-cards">
+      <div class="dash-card fi">
+        <div class="dash-icon">🗓️</div>
+        <div class="dash-card-title">カレンダービュー</div>
+        <div class="dash-card-body">構成案・初稿・修正稿・投稿日・入金日を月カレンダーで一覧。色分けで何が何日かひと目でわかる。</div>
+      </div>
+      <div class="dash-card fi">
+        <div class="dash-icon">📊</div>
+        <div class="dash-card-title">ガントチャート</div>
+        <div class="dash-card-body">全案件のスケジュールをガントで可視化。複数案件が重なってもどこを優先すべきか一発でわかる。</div>
+      </div>
+      <div class="dash-card fi">
+        <div class="dash-icon">🤖</div>
+        <div class="dash-card-title">AI自動入力</div>
+        <div class="dash-card-body">クライアントからのLINEメッセージを転送するだけ。AIが案件名・金額・日程を自動で解析して登録。手入力ゼロ。</div>
+      </div>
+      <div class="dash-card fi">
+        <div class="dash-icon">📂</div>
+        <div class="dash-card-title">案件カード管理</div>
+        <div class="dash-card-body">ステータス・金額・投稿日を案件カードで一覧表示。進行中・入金待ち・完了でフィルタリングも可能。</div>
+      </div>
+    </div>
+    <div style="background:#F0FBF4;border-radius:16px;padding:16px 20px;margin-top:20px" class="fi">
+      <div style="font-size:13px;font-weight:700;color:#06C755;margin-bottom:8px">📅 日程の色分けで「今日何をすべきか」がわかる</div>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;font-size:12px">
+        <span style="background:#ff950022;color:#ff9500;padding:4px 10px;border-radius:100px;font-weight:700">🟠 構成案</span>
+        <span style="background:#34c75922;color:#34c759;padding:4px 10px;border-radius:100px;font-weight:700">🟢 初稿</span>
+        <span style="background:#af52de22;color:#af52de;padding:4px 10px;border-radius:100px;font-weight:700">🟣 修正稿</span>
+        <span style="background:#007aff22;color:#007aff;padding:4px 10px;border-radius:100px;font-weight:700">🔵 投稿日</span>
+        <span style="background:#ffcc0022;color:#b8860b;padding:4px 10px;border-radius:100px;font-weight:700">🟡 入金日</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WAVE -->
+<div class="wave" style="transform:scaleY(-1)"><svg viewBox="0 0 1440 60" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="width:100%;height:40px"><path d="M0 30 C360 60 1080 0 1440 30 L1440 60 L0 60 Z" fill="#F0FBF4"/></svg></div>
 
 <!-- VOICES -->
 <section class="sec">
@@ -321,6 +373,10 @@ footer{background:#111;color:#555;text-align:center;padding:20px;font-size:12px}
     <div class="stat-row fi">
       <div class="stat-box"><div class="stat-num">0件</div><div class="stat-lbl">案件の<br>抜け漏れ</div></div>
       <div class="stat-box"><div class="stat-num">3分</div><div class="stat-lbl">請求書作成<br>（以前は1時間）</div></div>
+      <div class="stat-box"><div class="stat-num">5色</div><div class="stat-lbl">日程の色分け<br>カレンダー管理</div></div>
+      <div class="stat-box"><div class="stat-num">AI</div><div class="stat-lbl">LINE転送だけで<br>案件自動登録</div></div>
+    </div>
+    <div class="stat-row fi" style="margin-top:12px">
       <div class="stat-box"><div class="stat-num">4回</div><div class="stat-lbl">期限前の<br>自動リマインド</div></div>
       <div class="stat-box"><div class="stat-num">¥0</div><div class="stat-lbl">初期費用・<br>インストール費</div></div>
     </div>
@@ -408,6 +464,14 @@ footer{background:#111;color:#555;text-align:center;padding:20px;font-size:12px}
     <div class="faq-item fi">
       <button class="faq-q" onclick="toggleFaq(this)">複数のクライアントグループに対応できますか？</button>
       <div class="faq-a">Freeプランは1グループまで。Proプランは無制限です。複数案件を掛け持ちしているインフルエンサーにはProがおすすめです。</div>
+    </div>
+    <div class="faq-item fi">
+      <button class="faq-q" onclick="toggleFaq(this)">管理画面（ダッシュボード）はどこで使えますか？</button>
+      <div class="faq-a">LINEでBotを追加すると、スマホ専用の管理画面URLが届きます。そこからカレンダー・ガントチャート・案件一覧など全機能が使えます。アプリのインストールは不要、スマホのブラウザだけでOKです。</div>
+    </div>
+    <div class="faq-item fi">
+      <button class="faq-q" onclick="toggleFaq(this)">AI自動入力ってどうやって使うの？</button>
+      <div class="faq-a">クライアントから届いたLINEメッセージをBotに転送するだけ。AIが案件名・報酬金額・投稿日程などを自動で読み取ってダッシュボードに登録します。手入力は不要です。</div>
     </div>
   </div>
 </section>
