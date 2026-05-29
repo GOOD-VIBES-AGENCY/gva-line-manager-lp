@@ -125,7 +125,12 @@ nav{position:sticky;top:0;z-index:99;background:rgba(255,255,255,.95);backdrop-f
 
 /* Dashboard feature cards */
 .dash-cards{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.dash-card{background:#fff;border:1px solid #eee;border-radius:16px;padding:16px;box-shadow:0 2px 12px rgba(0,0,0,.06)}
+.dash-card{background:#fff;border:1px solid #eee;border-radius:16px;padding:16px;box-shadow:0 2px 12px rgba(0,0,0,.06);transition:transform .3s cubic-bezier(.34,1.56,.64,1),box-shadow .3s}
+.dash-card:hover{transform:translateY(-6px) scale(1.02);box-shadow:0 12px 32px rgba(6,199,85,.18)}
+.dash-card:nth-child(1){border-top:3px solid #ff9500}
+.dash-card:nth-child(2){border-top:3px solid #007aff}
+.dash-card:nth-child(3){border-top:3px solid #06C755}
+.dash-card:nth-child(4){border-top:3px solid #af52de}
 .dash-icon{font-size:28px;margin-bottom:8px}
 .dash-card-title{font-size:14px;font-weight:900;margin-bottom:6px}
 .dash-card-body{font-size:12px;color:#666;line-height:1.7}
@@ -143,12 +148,14 @@ footer{background:#111;color:#555;text-align:center;padding:20px;font-size:12px}
 .card-deck .card:nth-child(2){transform:rotate(1.2deg)}
 .card-deck .card:nth-child(3){transform:rotate(-1deg)}
 .card-deck .card:nth-child(4){transform:rotate(1.5deg)}
+.card-deck .card:nth-child(5){transform:rotate(-0.8deg)}
 .card-deck .card:hover{transform:rotate(0deg) scale(1.03)!important;box-shadow:0 14px 40px rgba(0,0,0,.15)}
 .card-emoji{width:52px;height:52px;border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:26px;margin-bottom:14px}
 .card-deck .card:nth-child(1) .card-emoji{background:#FEF3E2}
 .card-deck .card:nth-child(2) .card-emoji{background:#FCE8E8}
-.card-deck .card:nth-child(3) .card-emoji{background:#E8F5E9}
-.card-deck .card:nth-child(4) .card-emoji{background:#EDE9FE}
+.card-deck .card:nth-child(3) .card-emoji{background:#E3F2FD}
+.card-deck .card:nth-child(4) .card-emoji{background:#E8F5E9}
+.card-deck .card:nth-child(5) .card-emoji{background:#EDE9FE}
 
 /* BA: dramatic arrow */
 .ba-arr{background:linear-gradient(90deg,#019540,#06C755);color:#fff;font-size:12px;font-weight:900;letter-spacing:.1em;padding:11px;display:flex;align-items:center;justify-content:center;gap:8px}
